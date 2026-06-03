@@ -1,0 +1,48 @@
+{
+  "type": "FeatureCollection",
+  "name": "snap_locations_placeholder",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Sample SNAP Market A",
+        "category": "Grocery / market",
+        "snap_status": "SNAP-supported",
+        "address": "Placeholder address near Columbia Heights",
+        "neighbourhood": "Columbia Heights"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-77.0321, 38.9282]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Sample SNAP Grocer B",
+        "category": "Supermarket",
+        "snap_status": "SNAP-supported",
+        "address": "Placeholder address near Anacostia",
+        "neighbourhood": "Anacostia"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-76.9847, 38.8621]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Sample SNAP Store C",
+        "category": "Corner store",
+        "snap_status": "SNAP-supported",
+        "address": "Placeholder address near Deanwood",
+        "neighbourhood": "Deanwood"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-76.9358, 38.9012]
+      }
+    }
+  ]
+}

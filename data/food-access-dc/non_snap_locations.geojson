@@ -1,0 +1,48 @@
+{
+  "type": "FeatureCollection",
+  "name": "non_snap_locations_placeholder",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Sample Food Location D",
+        "category": "Restaurant / prepared food",
+        "snap_status": "Not SNAP-supported",
+        "address": "Placeholder address near Downtown",
+        "neighbourhood": "Downtown"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-77.0365, 38.9009]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Sample Food Location E",
+        "category": "Specialty food",
+        "snap_status": "Not SNAP-supported",
+        "address": "Placeholder address near Navy Yard",
+        "neighbourhood": "Navy Yard"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-77.0019, 38.8754]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Sample Food Location F",
+        "category": "Cafe / prepared food",
+        "snap_status": "Not SNAP-supported",
+        "address": "Placeholder address near Georgetown",
+        "neighbourhood": "Georgetown"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-77.0668, 38.9097]
+      }
+    }
+  ]
+}

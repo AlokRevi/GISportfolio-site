@@ -1,0 +1,135 @@
+.map-shell {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.map-intro {
+  padding: 1rem 1rem 0;
+}
+
+.food-map-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 260px;
+  gap: 0;
+}
+
+#food-access-map {
+  min-height: 520px;
+  width: 100%;
+}
+
+.map-sidebar {
+  border-left: 1px solid var(--color-border);
+  padding: 1rem;
+}
+
+.layer-controls {
+  display: grid;
+  gap: 0.65rem;
+  margin-bottom: 1.25rem;
+}
+
+.layer-control {
+  align-items: center;
+  display: flex;
+  gap: 0.55rem;
+  font-weight: 700;
+}
+
+.layer-control input {
+  width: 1rem;
+  height: 1rem;
+}
+
+.legend {
+  border-top: 1px solid var(--color-border);
+  padding-top: 1rem;
+}
+
+.legend h3 {
+  font-size: 1rem;
+}
+
+.legend-list {
+  display: grid;
+  gap: 0.45rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.legend-item {
+  align-items: center;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.legend-swatch {
+  border: 2px solid #fff;
+  box-shadow: 0 0 0 1px rgba(32, 40, 39, 0.22);
+  display: inline-block;
+  height: 14px;
+  width: 14px;
+}
+
+.legend-swatch.snap {
+  background: #2f7f73;
+  border-radius: 999px;
+}
+
+.legend-swatch.non-snap {
+  background: #d66f3f;
+  border-radius: 999px;
+}
+
+.legend-swatch.context {
+  background: rgba(61, 111, 145, 0.28);
+}
+
+.map-fallback {
+  background: var(--color-warning-soft);
+  border-top: 1px solid #ead9b7;
+  color: var(--color-text);
+  display: none;
+  padding: 1rem;
+}
+
+.map-fallback.is-visible {
+  display: block;
+}
+
+.maplibregl-popup-content {
+  border-radius: 8px;
+  box-shadow: 0 12px 28px rgba(32, 40, 39, 0.18);
+  font: 14px/1.45 var(--font-sans);
+  padding: 0.85rem;
+}
+
+.map-popup-title {
+  color: var(--color-text);
+  display: block;
+  font-weight: 800;
+  margin-bottom: 0.35rem;
+}
+
+.map-popup-row {
+  color: var(--color-muted);
+  margin: 0.15rem 0;
+}
+
+@media (max-width: 860px) {
+  .food-map-layout {
+    grid-template-columns: 1fr;
+  }
+
+  #food-access-map {
+    min-height: 420px;
+  }
+
+  .map-sidebar {
+    border-left: 0;
+    border-top: 1px solid var(--color-border);
+  }
+}

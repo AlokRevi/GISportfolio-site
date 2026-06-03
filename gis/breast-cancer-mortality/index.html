@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Racial Disparities in Breast Cancer Mortality | Alok Revi</title>
+    <meta name="description" content="GIS case study on spatial patterns in Black and White breast cancer mortality disparities across U.S. counties.">
+    <link rel="stylesheet" href="/css/style.css">
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <div class="container nav-wrap">
+        <a class="site-brand" href="/">Alok Revi</a>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" data-nav-toggle>Menu</button>
+        <nav class="site-nav" id="site-nav" aria-label="Primary navigation" data-site-nav>
+          <a href="/">Home</a>
+          <a href="/gis/" aria-current="page">GIS Portfolio</a>
+          <a href="/about/">About</a>
+          <a href="/contact/">Contact</a>
+        </nav>
+      </div>
+    </header>
+    <main id="main">
+      <section class="project-hero">
+        <div class="container">
+          <p class="eyebrow">Public Health | U.S. Counties</p>
+          <h1>Racial Disparities in Breast Cancer Mortality in the U.S.</h1>
+          <p class="lead">This case study examines whether Black and White breast cancer mortality differences show spatial structure across counties.</p>
+        </div>
+      </section>
+      <section class="section">
+        <div class="container project-layout">
+          <article>
+            <section class="case-section">
+              <h2>Context / Why It Matters</h2>
+              <p>Racial disparities in breast cancer mortality are spatially structured, not random. Mapping county-level differences can help communicate where public health burdens cluster and where further investigation is warranted.</p>
+              <div class="callout"><strong>Key insight</strong>Breast cancer mortality disparities are spatially clustered, not randomly distributed.</div>
+            </section>
+            <section class="case-section">
+              <h2>Main Visuals</h2>
+              <div class="visual-grid">
+                <figure>
+                  <div class="visual-placeholder" role="img" aria-label="Placeholder for breast cancer mortality data coverage visual">Data coverage / overall mortality<small>TODO image: assets/maps/breast-cancer-mortality/breast-cancer-data-coverage.png</small></div>
+                  <figcaption>Coverage and overall mortality visual, pending final export.</figcaption>
+                </figure>
+                <figure>
+                  <div class="visual-placeholder" role="img" aria-label="Placeholder for breast cancer mortality ratio visual">Mortality ratio visual<small>TODO image: assets/maps/breast-cancer-mortality/breast-cancer-mortality-ratio.png</small></div>
+                  <figcaption>Black-to-White mortality rate ratio visual, pending final export.</figcaption>
+                </figure>
+                <figure>
+                  <div class="visual-placeholder" role="img" aria-label="Placeholder for breast cancer disparity map">Disparity map<small>TODO image: assets/maps/breast-cancer-mortality/breast-cancer-disparity-map.png</small></div>
+                  <figcaption>County disparity map placeholder.</figcaption>
+                </figure>
+                <figure>
+                  <div class="visual-placeholder" role="img" aria-label="Placeholder for breast cancer mortality hot spot analysis">Hot spot analysis<small>TODO image: assets/maps/breast-cancer-mortality/breast-cancer-hotspot-analysis.png</small></div>
+                  <figcaption>Hot spot analysis placeholder.</figcaption>
+                </figure>
+              </div>
+            </section>
+            <section class="case-section">
+              <h2>Analysis</h2>
+              <p>The analysis compares Black and White breast cancer mortality rates where both values are available for the same county. A mortality ratio greater than 1 means Black mortality is higher than White mortality in that county.</p>
+              <p>Dual-data counties are necessary because a ratio cannot be calculated where one group has suppressed or missing mortality data. The Southeastern U.S. clustering insight should be presented carefully after final maps and hot spot outputs are inserted.</p>
+              <div class="callout warning"><strong>Limitation note</strong>Suppressed low-count data means some counties cannot be compared directly.</div>
+            </section>
+            <section class="case-section">
+              <h2>Methods</h2>
+              <p>Filter to counties with both Black and White mortality values, calculate the mortality rate ratio, map the disparity measure, and run hot spot analysis to identify statistically structured clustering.</p>
+            </section>
+            <section class="case-section">
+              <h2>Tools Used</h2>
+              <p>ArcGIS Pro, public health rate data, county joins, ratio calculation, hot spot analysis, static cartographic exports.</p>
+            </section>
+            <section class="case-section">
+              <h2>Limitations</h2>
+              <p>Suppression affects direct comparison, especially in counties with low counts. County-level patterns do not identify individual risk and should be interpreted with socioeconomic, health care access, screening, and treatment context.</p>
+            </section>
+            <section class="case-section">
+              <h2>Data Sources</h2>
+              <p>V1 contains placeholders only. Add final source citations, suppression rules, and analysis parameters in <code>data/breast-cancer-mortality/README.md</code>.</p>
+            </section>
+            <section class="case-section">
+              <h2>Conclusion / Next Step</h2>
+              <p>The next step is to add final exports and document the data suppression logic, ratio formula, and hot spot settings used in the analysis.</p>
+              <a class="back-link" href="/gis/">Back to GIS Portfolio</a>
+            </section>
+          </article>
+          <aside class="fact-panel" aria-label="Quick facts">
+            <h2>Quick Facts</h2>
+            <dl class="fact-list">
+              <div><dt>Research question</dt><dd>Where are Black and White breast cancer mortality differences spatially concentrated?</dd></div>
+              <div><dt>Key insight</dt><dd>Breast cancer mortality disparities are spatially clustered, not randomly distributed.</dd></div>
+              <div><dt>Tools used</dt><dd>ArcGIS Pro, mortality ratios, county joins, hot spot analysis.</dd></div>
+              <div><dt>Data sources</dt><dd>Placeholder visual blocks for V1; final source documentation pending.</dd></div>
+            </dl>
+          </aside>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <p>&copy; 2026 Alok Revi. GIS portfolio.</p>
+        <div class="footer-links">
+          <!-- TODO: Replace placeholder links with final URLs. -->
+          <a href="/contact/">Contact</a>
+          <a href="TODO_ADD_RESUME">Resume</a>
+          <a href="TODO_ADD_LINKEDIN">LinkedIn</a>
+          <a href="TODO_ADD_GITHUB">GitHub</a>
+        </div>
+      </div>
+    </footer>
+    <script src="/js/main.js"></script>
+  </body>
+</html>

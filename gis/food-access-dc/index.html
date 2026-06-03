@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Food Access in Washington, D.C. | Alok Revi GIS Portfolio</title>
+    <meta name="description" content="Food Access in Washington, D.C. GIS case study comparing food locations with SNAP-supported access using MapLibre and GeoJSON.">
+    <link rel="stylesheet" href="https://unpkg.com/maplibre-gl@5.6.0/dist/maplibre-gl.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/maps.css">
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <div class="container nav-wrap">
+        <a class="site-brand" href="/">Alok Revi</a>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" data-nav-toggle>Menu</button>
+        <nav class="site-nav" id="site-nav" aria-label="Primary navigation" data-site-nav>
+          <a href="/">Home</a>
+          <a href="/gis/" aria-current="page">GIS Portfolio</a>
+          <a href="/about/">About</a>
+          <a href="/contact/">Contact</a>
+        </nav>
+      </div>
+    </header>
+    <main id="main">
+      <section class="project-hero">
+        <div class="container">
+          <p class="eyebrow">Food Access | Washington, D.C.</p>
+          <h1>Food Access in Washington, D.C.</h1>
+          <p class="lead">This project compares general food locations with SNAP-supported access in Washington, D.C. to reveal gaps between food availability and meaningful food access for low-income communities.</p>
+        </div>
+      </section>
+      <section class="section">
+        <div class="container project-layout">
+          <article>
+            <section class="case-section">
+              <h2>Context / Why It Matters</h2>
+              <p>Food availability is not the same as food accessibility. A neighborhood can contain food businesses while still offering limited affordable, SNAP-supported, or practical grocery access for residents.</p>
+              <p>This framing separates food presence from food access and uses SNAP participation as one lens for understanding whether food options are meaningful for low-income households.</p>
+              <div class="callout"><strong>Key insight</strong>Food presence does not equal accessibility.</div>
+            </section>
+            <section class="case-section">
+              <h2>Interactive Map</h2>
+              <p>The V1 web map uses clearly labeled placeholder GeoJSON. It is designed to be replaced by real ArcGIS Pro exports while preserving the web mapping structure.</p>
+              <div class="map-shell">
+                <div class="map-intro">
+                  <h3>SNAP-supported and non-SNAP food locations</h3>
+                  <p>Toggle layers to compare general food presence with SNAP-supported access and an optional demographic context area.</p>
+                </div>
+                <div class="food-map-layout">
+                  <div id="food-access-map" role="region" aria-label="Interactive map of placeholder food access locations in Washington D.C."></div>
+                  <aside class="map-sidebar" aria-label="Map layers and legend">
+                    <h3>Layers</h3>
+                    <div class="layer-controls">
+                      <label class="layer-control"><input id="toggle-snap" type="checkbox" checked> SNAP-supported locations</label>
+                      <label class="layer-control"><input id="toggle-non-snap" type="checkbox" checked> Non-SNAP food locations</label>
+                      <label class="layer-control"><input id="toggle-demographic" type="checkbox" checked> Demographic context</label>
+                    </div>
+                    <div class="legend">
+                      <h3>Legend</h3>
+                      <ul class="legend-list">
+                        <li class="legend-item"><span class="legend-swatch snap"></span> SNAP-supported</li>
+                        <li class="legend-item"><span class="legend-swatch non-snap"></span> Non-SNAP food location</li>
+                        <li class="legend-item"><span class="legend-swatch context"></span> Context area</li>
+                      </ul>
+                    </div>
+                  </aside>
+                </div>
+                <p class="map-fallback" data-map-fallback>Map fallback area. If the interactive map does not load, run the site from a local server and confirm the GeoJSON paths are available.</p>
+              </div>
+              <p class="caption">Placeholder map data is centered on Washington, D.C. and should not be interpreted as final analysis.</p>
+            </section>
+            <section class="case-section">
+              <h2>Analysis</h2>
+              <p>The analysis distinguishes locations where food is present from locations where SNAP-supported purchasing is available. That distinction matters in Southeast D.C., where access gaps can be shaped by income, travel distance, store type, and eligibility of retailers.</p>
+              <p>The map supports a hiring-manager review of the workflow: prepare point layers, symbolize by access type, add demographic context, and communicate what the map can and cannot prove.</p>
+            </section>
+            <section class="case-section">
+              <h2>Methods</h2>
+              <p>Prepared separate food-location layers for SNAP-supported and non-SNAP locations, exported them as GeoJSON, and loaded them into a MapLibre GL JS map. Popups translate attributes into readable labels rather than exposing raw field names.</p>
+            </section>
+            <section class="case-section">
+              <h2>Tools Used</h2>
+              <p>ArcGIS Pro, ArcGIS Online, MapLibre GL JS, JavaScript, GeoJSON.</p>
+            </section>
+            <section class="case-section">
+              <h2>Limitations</h2>
+              <p>V1 uses sample placeholder data. Final interpretation should use verified food retailer records, SNAP authorization status, current addresses, population context, and appropriate distance or transit measures.</p>
+            </section>
+            <section class="case-section">
+              <h2>Data Sources</h2>
+              <p>Placeholder GeoJSON files are included under <code>data/food-access-dc/</code>. Replace them with real ArcGIS Pro exports before publishing final results.</p>
+            </section>
+            <section class="case-section">
+              <h2>Conclusion / Next Step</h2>
+              <p>The next step is to replace placeholder layers with validated source data and add a measured access surface or travel-distance comparison.</p>
+              <a class="back-link" href="/gis/">Back to GIS Portfolio</a>
+            </section>
+          </article>
+          <aside class="fact-panel" aria-label="Quick facts">
+            <h2>Quick Facts</h2>
+            <dl class="fact-list">
+              <div><dt>Research question</dt><dd>Where does food availability fail to translate into meaningful access?</dd></div>
+              <div><dt>Key insight</dt><dd>Food presence does not equal accessibility.</dd></div>
+              <div><dt>Tools used</dt><dd>ArcGIS Pro, ArcGIS Online, MapLibre GL JS, JavaScript, GeoJSON.</dd></div>
+              <div><dt>Data sources</dt><dd>Clearly labeled placeholder GeoJSON for V1; replace with final exports.</dd></div>
+            </dl>
+          </aside>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <p>&copy; 2026 Alok Revi. GIS portfolio.</p>
+        <div class="footer-links">
+          <!-- TODO: Replace placeholder links with final URLs. -->
+          <a href="/contact/">Contact</a>
+          <a href="TODO_ADD_RESUME">Resume</a>
+          <a href="TODO_ADD_LINKEDIN">LinkedIn</a>
+          <a href="TODO_ADD_GITHUB">GitHub</a>
+        </div>
+      </div>
+    </footer>
+    <script src="https://unpkg.com/maplibre-gl@5.6.0/dist/maplibre-gl.js"></script>
+    <script src="/js/main.js"></script>
+    <script src="/js/layer-controls.js"></script>
+    <script src="/js/food-access-map.js"></script>
+  </body>
+</html>
