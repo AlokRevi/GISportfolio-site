@@ -40,7 +40,7 @@
                 <p><strong>Theme:</strong> Food availability compared with meaningful access.</p>
                 <p><strong>Methods:</strong> ArcGIS Pro, ArcGIS Online, GeoJSON, MapLibre GL JS.</p>
                 <p><strong>Insight:</strong> Food presence does not equal accessibility.</p>
-                <a class="link" href="/gis/food-access-dc/">View Food Access case study</a>
+                <a class="link" href="#food-access">Jump to Food Access section</a>
               </div>
             </article>
             <article class="project-card">
@@ -50,7 +50,7 @@
                 <p><strong>Theme:</strong> State-level homelessness by count, rate, growth, and shelter status.</p>
                 <p><strong>Methods:</strong> rate calculation, temporal change, comparative cartography.</p>
                 <p><strong>Insight:</strong> Homelessness varies not only by scale, but by intensity, change, and structure.</p>
-                <a class="link" href="/gis/homelessness-us/">View Homelessness case study</a>
+                <a class="link" href="#homelessness">Jump to Homelessness section</a>
               </div>
             </article>
             <article class="project-card">
@@ -60,7 +60,7 @@
                 <p><strong>Theme:</strong> Spatial structure in county-level Black and White mortality differences.</p>
                 <p><strong>Methods:</strong> rate ratios, dual-data filtering, suppression review, hot spot analysis.</p>
                 <p><strong>Insight:</strong> Breast cancer mortality disparities are spatially clustered, not randomly distributed.</p>
-                <a class="link" href="/gis/breast-cancer-mortality/">View Breast Cancer case study</a>
+                <a class="link" href="#breast-cancer-mortality">Jump to Breast Cancer Mortality section</a>
               </div>
             </article>
           </div>
@@ -76,6 +76,149 @@
             <li>Interpretation</li>
             <li>Public-facing story</li>
           </ol>
+        </div>
+      </section>
+      <section class="section portfolio-case" id="food-access" aria-labelledby="food-access-heading">
+        <div class="container case-preview">
+          <article>
+            <p class="case-kicker">Washington, D.C. | Food access</p>
+            <h2 id="food-access-heading">Food Access in Washington, D.C.</h2>
+            <p class="lead">Food availability is not the same as food accessibility.</p>
+            <p>This project compares general food locations with SNAP-supported access in Washington, D.C. to reveal gaps between food availability and meaningful food access for low-income communities.</p>
+            <div class="callout"><strong>Key insight</strong>Food presence does not equal accessibility.</div>
+            <h3>Analysis Focus</h3>
+            <p>The V1 analysis separates food presence from SNAP-supported access and frames Southeast D.C. access gaps through an equity lens. Final claims should be based on validated food retailer records, SNAP authorization status, and demographic context.</p>
+            <h3>Methods</h3>
+            <p>Prepare food location layers, classify SNAP-supported and non-SNAP locations, export GeoJSON, and use web mapping to communicate the difference between availability and practical access.</p>
+            <h3>Limitations / Next Step</h3>
+            <p>Current map data is placeholder data. The next step is to replace it with verified ArcGIS Pro exports and add measured distance, transit, or service-area analysis.</p>
+            <p class="future-note">Standalone project page is retained for future expansion, but V1 prioritizes this single-page portfolio flow.</p>
+          </article>
+          <aside class="content-panel">
+            <h3>Quick Facts</h3>
+            <div class="mini-facts">
+              <div><strong>Research question:</strong><br>Where does food availability fail to translate into meaningful access?</div>
+              <div><strong>Tools:</strong><br>ArcGIS Pro, ArcGIS Online, MapLibre GL JS, JavaScript, GeoJSON.</div>
+              <div><strong>Data:</strong><br>Placeholder GeoJSON; replace with final ArcGIS Pro exports.</div>
+            </div>
+            <div class="visual-placeholder" role="img" aria-label="Placeholder preview for Food Access interactive map">Interactive web map preview</div>
+          </aside>
+        </div>
+      </section>
+      <section class="section alt portfolio-case" id="homelessness" aria-labelledby="homelessness-heading">
+        <div class="container case-preview">
+          <article>
+            <p class="case-kicker">United States | Housing | 2020-2024</p>
+            <h2 id="homelessness-heading">Changing Patterns of Homelessness in the United States</h2>
+            <p class="lead">Homelessness varies by intensity, growth, and structure across states.</p>
+            <p>This project compares state-level homelessness using total count, population-adjusted rate, change from 2020 to 2024, and unsheltered percentage.</p>
+            <div class="callout"><strong>Important concept</strong>Raw counts show burden. Rates show intensity.</div>
+            <h3>Total Count vs Homelessness Rate</h3>
+            <div class="image-slider" data-image-slider tabindex="0" aria-label="Compare homelessness total count and rate maps">
+              <div class="slider-track" aria-live="polite">
+                <figure class="slider-slide" aria-hidden="false">
+                  <img src="../assets/maps/homelessness-us/homelessness-total-count-2024.png" alt="Map showing total homeless people by U.S. state in 2024, with the highest totals visible in states such as California, New York, Texas, Florida, and Washington." loading="lazy">
+                  <figcaption>Total Homeless People, 2024</figcaption>
+                </figure>
+                <figure class="slider-slide" aria-hidden="true">
+                  <img src="../assets/maps/homelessness-us/homelessness-rate-2024.png" alt="Map showing homelessness rate per 10,000 people by U.S. state in 2024, with higher rates concentrated in places such as New York, Vermont, Hawaii, California, Oregon, and Alaska." loading="lazy">
+                  <figcaption>Homelessness Rate per 10,000 People, 2024</figcaption>
+                </figure>
+              </div>
+              <div class="slider-controls" aria-label="Homelessness map slider controls">
+                <button class="slider-button" type="button" data-slider-prev aria-label="Show previous homelessness map">Previous</button>
+                <div class="slider-dots" role="tablist" aria-label="Choose homelessness map">
+                  <button class="slider-dot" type="button" data-slider-dot aria-label="Show Total Homeless People, 2024" aria-current="true"></button>
+                  <button class="slider-dot" type="button" data-slider-dot aria-label="Show Homelessness Rate per 10,000 People, 2024" aria-current="false"></button>
+                </div>
+                <button class="slider-button" type="button" data-slider-next aria-label="Show next homelessness map">Next</button>
+              </div>
+            <p class="caption">Use the slider to compare two perspectives. Total counts show where the largest number of people are experiencing homelessness, while rates show where homelessness is most intense relative to population.</p>
+            </div>
+            <h3>Where the Crisis Is Accelerating</h3>
+            <p>Change in homelessness rate can be read in two ways. Absolute change shows how much the rate increased or decreased, while standard deviation change shows which states stand out as unusual compared with the national pattern.</p>
+            <div class="image-slider" data-image-slider tabindex="0" aria-label="Compare absolute and relative change in homelessness rate maps">
+              <div class="slider-track" aria-live="polite">
+                <figure class="slider-slide" aria-hidden="false">
+                  <img src="../assets/maps/homelessness-us/homelessness-rate-difference-2020-2024.png" alt="Map showing the absolute difference in homelessness rate by U.S. state between 2020 and 2024, with stronger increases visible in states such as New York, Vermont, Hawaii, Oregon, Illinois, Colorado, and New Mexico." loading="lazy">
+                  <figcaption>Difference in Homelessness Rate, 2020-2024</figcaption>
+                </figure>
+                <figure class="slider-slide" aria-hidden="true">
+                  <img src="../assets/maps/homelessness-us/homelessness-rate-change-standard-deviation-2020-2024.png" alt="Map showing change in homelessness rate by U.S. state using standard deviation classes, highlighting which states increased or decreased more strongly relative to the national pattern." loading="lazy">
+                  <figcaption>Relative Change in Homelessness Rate, 2020-2024</figcaption>
+                </figure>
+              </div>
+              <div class="slider-controls" aria-label="Homelessness change map slider controls">
+                <button class="slider-button" type="button" data-slider-prev aria-label="Show previous homelessness change map">Previous</button>
+                <div class="slider-dots" role="tablist" aria-label="Choose homelessness change map">
+                  <button class="slider-dot" type="button" data-slider-dot aria-label="Show Difference in Homelessness Rate, 2020-2024" aria-current="true"></button>
+                  <button class="slider-dot" type="button" data-slider-dot aria-label="Show Relative Change in Homelessness Rate, 2020-2024" aria-current="false"></button>
+                </div>
+                <button class="slider-button" type="button" data-slider-next aria-label="Show next homelessness change map">Next</button>
+              </div>
+            <p class="caption">Use the slider to compare two ways of reading change. Absolute change shows where homelessness rates increased or decreased the most, while standard deviation highlights which states stand out compared with the national pattern.</p>
+            </div>
+            <h3>Structural Differences: Sheltered vs. Unsheltered Homelessness</h3>
+            <p>Homelessness is not only a question of scale. States with similar homelessness rates can differ sharply in how homelessness is experienced. The unsheltered share shows where people are more likely to be outside the shelter system, while the bubble chart compares rate, unsheltered share, and total count together.</p>
+            <div class="visual-card-grid stacked-visuals">
+              <figure class="visual-card">
+                <h4>Rate vs. Unsheltered Share, 2024</h4>
+                <img src="../assets/charts/homelessness-us/homelessness-rate-unsheltered-bubble-2024.png" alt="Bubble chart comparing homelessness rate per 10,000 people and unsheltered share percentage by U.S. state in 2024, with bubble size representing total homeless count. States such as California, Oregon, Washington, Hawaii, District of Columbia, New York, Texas, and Florida are labelled." loading="lazy">
+                <figcaption>This chart compares three dimensions at once: homelessness rate, unsheltered share, and total homeless count. California and Oregon show high unsheltered shares, while New York has a high homelessness rate but a much lower unsheltered share, showing a different structure of homelessness.</figcaption>
+              </figure>
+              <figure class="visual-card">
+                <h4>Percentage of Homeless People Who Are Unsheltered, 2024</h4>
+                <img src="../assets/maps/homelessness-us/homelessness-unsheltered-2024.png" alt="Choropleth map showing the percentage of homeless people who are unsheltered by U.S. state in 2024, with higher unsheltered shares visible in many western and southern states." loading="lazy">
+                <figcaption>This map shows where a larger share of people experiencing homelessness are unsheltered. Higher unsheltered shares appear across many western and southern states, while some northeastern states show lower unsheltered shares despite high overall homelessness rates.</figcaption>
+              </figure>
+            </div>
+            <div class="callout"><strong>Structural insight</strong>Same scale of problem, different structure. A high homelessness rate does not always mean a high unsheltered share, so policy responses should account for both intensity and shelter conditions.</div>
+            <h3>Analysis Focus</h3>
+            <p>The project distinguishes large total counts from high per-capita intensity and uses change and unsheltered share to describe different forms of state-level housing pressure.</p>
+            <h3>Methods</h3>
+            <p>Compile state totals, calculate rates, compare 2020 and 2024 values, and prepare static maps and charts for rate, count-versus-rate, change, and unsheltered percentage.</p>
+            <h3>Limitations / Next Step</h3>
+            <p>Point-in-time counts are sensitive to local methods, timing, and definitions. The next step is to add final map exports and source-specific interpretation.</p>
+            <p class="future-note">Standalone project page is retained for future expansion, but V1 prioritizes this single-page portfolio flow.</p>
+          </article>
+          <aside class="content-panel">
+            <h3>Planned Visuals</h3>
+            <div class="mini-facts">
+              <div>Homelessness rate map</div>
+              <div>Total count vs rate comparison</div>
+              <div>Change from 2020-2024</div>
+              <div>Unsheltered percentage</div>
+            </div>
+            <div class="visual-placeholder" role="img" aria-label="Placeholder preview for homelessness static maps">Static map and chart exports pending</div>
+          </aside>
+        </div>
+      </section>
+      <section class="section portfolio-case" id="breast-cancer-mortality" aria-labelledby="breast-cancer-heading">
+        <div class="container case-preview">
+          <article>
+            <p class="case-kicker">United States counties | Public health</p>
+            <h2 id="breast-cancer-heading">Racial Disparities in Breast Cancer Mortality in the U.S.</h2>
+            <p class="lead">Racial disparities in breast cancer mortality are spatially structured, not random.</p>
+            <p>This project compares Black and White breast cancer mortality rates in counties where both values are available and evaluates whether disparities cluster spatially.</p>
+            <div class="callout"><strong>Key insight</strong>Breast cancer mortality disparities are spatially clustered, not randomly distributed.</div>
+            <h3>Analysis Focus</h3>
+            <p>A mortality ratio greater than 1 means Black mortality is higher than White mortality in that county. Dual-data counties are required because suppressed low-count data means some counties cannot be compared directly.</p>
+            <h3>Methods</h3>
+            <p>Filter to comparable counties, calculate Black-to-White mortality ratios, map disparity patterns, and use hot spot analysis to evaluate spatial clustering.</p>
+            <h3>Limitations / Next Step</h3>
+            <p>Suppression and county-level aggregation limit interpretation. The next step is to add final outputs and document suppression rules, ratio calculation, and hot spot parameters.</p>
+            <p class="future-note">Standalone project page is retained for future expansion, but V1 prioritizes this single-page portfolio flow.</p>
+          </article>
+          <aside class="content-panel">
+            <h3>Planned Visuals</h3>
+            <div class="mini-facts">
+              <div>Data coverage / overall mortality</div>
+              <div>Mortality ratio visual</div>
+              <div>Disparity map</div>
+              <div>Hot spot analysis</div>
+            </div>
+            <div class="visual-placeholder" role="img" aria-label="Placeholder preview for breast cancer mortality maps">Static public health map exports pending</div>
+          </aside>
         </div>
       </section>
     </main>
