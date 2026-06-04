@@ -37,11 +37,11 @@ The site is static. It does not require a backend, database, CMS, framework, or 
 
 ## Notes
 
-- `dist-gis/index.html` is the V1 single scrollable GIS portfolio page.
+- `dist-gis/index.html` is the single scrollable GIS portfolio page.
 - There is intentionally no `dist-gis/gis/index.html`.
-- Project cards on `dist-gis/index.html` jump to page sections instead of prioritizing separate project pages.
-- The separate project folders are retained for future expansion.
+- Project cards on `dist-gis/index.html` jump to page sections.
+- The separate project folders are included as supporting public pages.
 - Internal links use relative paths for deployment under `/gis/`.
 - Food Access map data loads from `../data/food-access-dc/` relative to `/gis/food-access-dc/`.
-- Placeholder profile links and final map exports still need to be replaced before public launch.
+- The site is ready to upload as a static subfolder deployment.
 

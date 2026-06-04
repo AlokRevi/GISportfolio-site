@@ -1,6 +1,6 @@
 {
   "type": "FeatureCollection",
-  "name": "snap_locations_placeholder",
+  "name": "snap_locations_sample",
   "features": [
     {
       "type": "Feature",
@@ -46,3 +46,4 @@
     }
   ]
 }
+

@@ -11,11 +11,11 @@
     <a class="skip-link" href="#main">Skip to content</a>
     <header class="site-header">
       <div class="container nav-wrap">
-        <a class="site-brand" href="../">Alok Revi</a>
+        <a class="site-brand" href="/">Alok Revi</a>
         <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" data-nav-toggle>Menu</button>
         <nav class="site-nav" id="site-nav" aria-label="Primary navigation" data-site-nav>
-          <a href="../">GIS Portfolio</a>
-          <a href="../food-access-dc/">Food Access</a>
+          <a href="/">Home</a>
+          <a href="../" aria-current="page">GIS Portfolio</a>
           <a href="../about/">About</a>
           <a href="../contact/">Contact</a>
         </nav>
@@ -39,29 +39,33 @@
             </section>
             <section class="case-section">
               <h2>Main Visuals</h2>
-              <div class="visual-grid">
-                <figure>
-                  <div class="visual-placeholder" role="img" aria-label="Planned visual card for 2024 homelessness rate map">Homelessness rate map<small>TODO image: assets/maps/homelessness-us/homelessness-rate-2024.png</small></div>
-                  <figcaption>State homelessness rate per population. Final static map exports will be added before public release.</figcaption>
+              <div class="visual-card-grid stacked-visuals">
+                <figure class="visual-card">
+                  <h3>Total Homeless People, 2024</h3>
+                  <img src="../assets/maps/homelessness-us/homelessness-total-count-2024.png" alt="Map showing total homeless people by U.S. state in 2024." loading="lazy">
+                  <figcaption>Total counts show where the largest number of people are experiencing homelessness.</figcaption>
                 </figure>
-                <figure>
-                  <div class="visual-placeholder" role="img" aria-label="Planned visual card for total count versus rate comparison">Total count vs rate comparison<small>TODO image: assets/maps/homelessness-us/homelessness-count-vs-rate.png</small></div>
-                  <figcaption>Comparison of burden and intensity. Final static map exports will be added before public release.</figcaption>
+                <figure class="visual-card">
+                  <h3>Homelessness Rate per 10,000 People, 2024</h3>
+                  <img src="../assets/maps/homelessness-us/homelessness-rate-2024.png" alt="Map showing homelessness rate per 10,000 people by U.S. state in 2024." loading="lazy">
+                  <figcaption>Rates show where homelessness is most intense relative to population.</figcaption>
                 </figure>
-                <figure>
-                  <div class="visual-placeholder" role="img" aria-label="Planned visual card for homelessness change from 2020 to 2024">Change from 2020-2024<small>TODO image: assets/maps/homelessness-us/homelessness-change-2020-2024.png</small></div>
-                  <figcaption>Planned change analysis visual for 2020 to 2024.</figcaption>
+                <figure class="visual-card">
+                  <h3>Difference in Homelessness Rate, 2020-2024</h3>
+                  <img src="../assets/maps/homelessness-us/homelessness-rate-difference-2020-2024.png" alt="Map showing the absolute difference in homelessness rate by U.S. state between 2020 and 2024." loading="lazy">
+                  <figcaption>Absolute change shows where homelessness rates increased or decreased over time.</figcaption>
                 </figure>
-                <figure>
-                  <div class="visual-placeholder" role="img" aria-label="Planned visual card for unsheltered homelessness percentage in 2024">Unsheltered percentage<small>TODO image: assets/maps/homelessness-us/homelessness-unsheltered-2024.png</small></div>
-                  <figcaption>Planned unsheltered composition visual for 2024.</figcaption>
+                <figure class="visual-card">
+                  <h3>Percentage Unsheltered, 2024</h3>
+                  <img src="../assets/maps/homelessness-us/homelessness-unsheltered-2024.png" alt="Map showing the percentage of homeless people who are unsheltered by U.S. state in 2024." loading="lazy">
+                  <figcaption>Unsheltered share shows how homelessness is experienced differently across state shelter systems.</figcaption>
                 </figure>
               </div>
             </section>
             <section class="case-section">
               <h2>Analysis</h2>
               <p>Homelessness varies not only by scale, but by intensity, change, and structure. A state with a high total count may not have the highest rate, and a state with a smaller count may show a more severe per-capita condition.</p>
-              <p>The regional pattern discussion should compare where rates are elevated, where growth from 2020 to 2024 is strongest, and where unsheltered homelessness forms a larger share of total homelessness. Final claims should be tied to verified data and final map exports.</p>
+              <p>The regional pattern discussion compares where rates are elevated, where growth from 2020 to 2024 is strongest, and where unsheltered homelessness forms a larger share of total homelessness.</p>
             </section>
             <section class="case-section">
               <h2>Methods</h2>
@@ -81,7 +85,7 @@
             </section>
             <section class="case-section">
               <h2>Conclusion / Next Step</h2>
-              <p>The next step is to insert final map exports and write region-specific interpretation based on verified results.</p>
+              <p>The next step is to add a brief region-by-region interpretation that connects the map sequence to state-level policy context.</p>
               <a class="back-link" href="../">Back to GIS Portfolio</a>
             </section>
           </article>
@@ -101,15 +105,12 @@
       <div class="container footer-grid">
         <p>&copy; 2026 Alok Revi. GIS portfolio.</p>
         <div class="footer-links">
-          <!-- TODO: Replace placeholder links with final URLs. -->
           <a href="../contact/">Contact</a>
-          <a href="TODO_ADD_RESUME">Resume</a>
-          <a href="TODO_ADD_LINKEDIN">LinkedIn</a>
-          <a href="TODO_ADD_GITHUB">GitHub</a>
         </div>
       </div>
     </footer>
     <script src="../js/main.js"></script>
   </body>
 </html>
+
 

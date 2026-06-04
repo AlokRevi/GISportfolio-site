@@ -13,29 +13,41 @@
     <a class="skip-link" href="#main">Skip to content</a>
     <header class="site-header">
       <div class="container nav-wrap">
-        <a class="site-brand" href="./">Alok Revi</a>
+        <a class="site-brand" href="https://alokrevi.com/">Alok Revi</a>
         <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" data-nav-toggle>Menu</button>
         <nav class="site-nav" id="site-nav" aria-label="Primary navigation" data-site-nav>
+          <a href="https://alokrevi.com/">Home</a>
           <a href="./" aria-current="page">GIS Portfolio</a>
-          <a href="#food-access">Food Access</a>
           <a href="./about/">About</a>
           <a href="./contact/">Contact</a>
         </nav>
       </div>
     </header>
     <main id="main">
-      <section class="page-hero">
+      <section class="page-hero gis-hero">
         <div class="container">
-          <p class="eyebrow">Case Studies</p>
-          <h1>GIS Portfolio</h1>
-          <p class="lead">Spatial analysis projects focused on inequality, access, housing, public health, and public-interest decision-making.</p>
-          <p>These projects show how I move from raw data to cleaned datasets, spatial analysis, map design, interpretation, and limitations.</p>
+          <p class="eyebrow">Selected GIS Work</p>
+          <h1>Alok Revi</h1>
+          <p class="hero-subtitle">GIS Analyst | Spatial Analysis | Web Mapping</p>
+          <p class="lead">I use GIS to reveal public-interest patterns that are hard to see in raw data alone — turning data preparation, spatial analysis, cartographic design, and interpretation into clear visual stories.</p>
+          <div class="hero-actions">
+            <a class="button" href="#case-studies">View case studies &rarr;</a>
+            <a class="button secondary" href="./contact/">Contact</a>
+          </div>
+          <p class="proof-strip">3 case studies <span>•</span> Interactive web mapping <span>•</span> ArcGIS Pro <span>•</span> MapLibre GL JS <span>•</span> GeoJSON <span>•</span> Public-interest data</p>
         </div>
       </section>
-      <section class="section">
+      <section class="section" id="case-studies" aria-labelledby="case-studies-heading">
         <div class="container">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Portfolio Cases</p>
+              <h2 id="case-studies-heading">Three public-interest GIS case studies</h2>
+            </div>
+          </div>
           <div class="grid three">
             <article class="project-card">
+              <div class="thumbnail-preview food-card">Interactive access map</div>
               <div class="project-card-body">
                 <p class="meta">Washington, D.C. | Food access</p>
                 <h2>Food Access in Washington, D.C.</h2>
@@ -46,6 +58,7 @@
               </div>
             </article>
             <article class="project-card">
+              <div class="thumbnail-preview housing-card">Static maps and charts</div>
               <div class="project-card-body">
                 <p class="meta">United States | Housing</p>
                 <h2>Changing Patterns of Homelessness, 2020-2024</h2>
@@ -56,28 +69,17 @@
               </div>
             </article>
             <article class="project-card">
+              <div class="thumbnail-preview health-card">County-level disparity maps</div>
               <div class="project-card-body">
                 <p class="meta">United States counties | Public health</p>
                 <h2>Racial Disparities in Breast Cancer Mortality</h2>
                 <p><strong>Theme:</strong> Spatial structure in county-level Black and White mortality differences.</p>
-                <p><strong>Methods:</strong> rate ratios, dual-data filtering, suppression review, hot spot analysis.</p>
-                <p><strong>Insight:</strong> Breast cancer mortality disparities are spatially clustered, not randomly distributed.</p>
+                <p><strong>Methods:</strong> rate ratios, dual-data filtering, suppression review, comparative cartography.</p>
+                <p><strong>Insight:</strong> Comparable-county ratios reveal where racial mortality differences can be mapped directly.</p>
                 <a class="link" href="#breast-cancer-mortality">Jump to Breast Cancer Mortality section</a>
               </div>
             </article>
           </div>
-        </div>
-      </section>
-      <section class="section alt">
-        <div class="container">
-          <h2>How I Approach GIS Problems</h2>
-          <ol class="workflow" aria-label="GIS workflow">
-            <li>Data</li>
-            <li>Analysis</li>
-            <li>Map</li>
-            <li>Interpretation</li>
-            <li>Public-facing story</li>
-          </ol>
         </div>
       </section>
       <section class="section portfolio-case" id="food-access" aria-labelledby="food-access-heading">
@@ -92,6 +94,7 @@
             <section class="map-section" aria-labelledby="food-access-map-title">
               <h3 id="food-access-map-title">Mapping Food Assistance Access Against Poverty in Washington, D.C.</h3>
               <p>This map compares food assistance infrastructure with tract-level poverty in Washington, D.C. SNAP retailers and farmers markets show where food access points exist, while the poverty layer shows where economic need is higher. The goal is to examine whether food access aligns with the communities most likely to need it.</p>
+              <p class="map-note neutral"><strong>How to use this map:</strong> Toggle poverty, SNAP retailers, farmers markets, and candidate access gaps to compare food assistance locations against areas of higher economic need.</p>
               <div class="story-view-controls" aria-label="Guided food access map views">
                 <button type="button" class="story-view-button" data-food-story-view="access-points" aria-pressed="false" aria-label="Story view 1: Food access points">1 Food access points</button>
                 <button type="button" class="story-view-button" data-food-story-view="poverty-context" aria-pressed="false" aria-label="Story view 2: Poverty context">2 Poverty context</button>
@@ -128,15 +131,17 @@
                 <h3>What to Look For</h3>
                 <p><strong>Map question:</strong> Where do food assistance locations overlap with higher-poverty census tracts?</p>
                 <p><strong>What to look for:</strong> Compare SNAP retailer locations against higher-poverty tracts. Areas with higher poverty and fewer nearby access points should be investigated further.</p>
-                <p><strong>Limitation:</strong> This map shows spatial proximity, not full accessibility. Transportation, food price, store quality, and cultural fit are not included.</p>
               </div>
               <div class="callout"><strong>Key finding</strong>Food assistance locations are present across Washington, D.C., but their distribution should be interpreted against poverty concentration. Food presence alone does not prove meaningful access.</div>
               <div class="callout"><strong>Candidate access gaps</strong>Several higher-poverty census tracts show limited nearby SNAP retailer coverage. These areas are not final conclusions, but they are useful candidates for deeper food-access review.</div>
               <p class="map-note"><strong>Limitation:</strong> This analysis uses straight-line distance from tract representative points and does not account for transportation, walkability, food price, store quality, or operating hours.</p>
             </section>
           <article>
+            <h3>Who is most affected?</h3>
+            <p>Food access gaps matter most when they overlap with economic vulnerability. Higher-poverty areas with fewer nearby SNAP-supported retailers should be treated as candidate areas for deeper food-access review, not as final conclusions.</p>
+            <p>This analysis can help identify areas where food access planning, SNAP retailer outreach, or deeper network-distance analysis may be useful.</p>
             <h3>Analysis Focus</h3>
-            <p>The V1 analysis separates food presence from SNAP-supported access and frames Southeast D.C. access gaps through an equity lens. Final claims should be based on validated food retailer records, SNAP authorization status, and demographic context.</p>
+            <p>The analysis separates food presence from SNAP-supported access and frames Southeast D.C. access gaps through an equity lens. Claims should be interpreted with current food retailer records, SNAP authorization status, and demographic context.</p>
             <h3>Methods</h3>
             <p>Prepare food location layers, classify SNAP-supported and non-SNAP locations, export GeoJSON, and use web mapping to communicate the difference between availability and practical access.</p>
             <h3>Data Sources</h3>
@@ -149,16 +154,8 @@
             </ul>
             <h3>Limitations / Next Step</h3>
             <p>The web map is a screening tool for spatial patterns. The next step is to add measured network distance, transit access, or service-area analysis to better represent practical accessibility.</p>
-            <p class="future-note">Standalone project page is retained for future expansion, but V1 prioritizes this single-page portfolio flow.</p>
+            <p>This project shows how food presence and practical food access can tell different spatial stories.</p>
           </article>
-          <aside class="content-panel">
-            <h3>Quick Facts</h3>
-            <div class="mini-facts">
-              <div><strong>Research question:</strong><br>Where does food availability fail to translate into meaningful access?</div>
-              <div><strong>Tools:</strong><br>ArcGIS Pro, ArcGIS Online, MapLibre GL JS, JavaScript, GeoJSON.</div>
-              <div><strong>Data:</strong><br>USDA SNAP Retailer Location Data, USDA Farmers Market Directory, U.S. Census ACS 2024 5-Year estimates, and TIGER/Line census tract boundaries. Processed into GeoJSON for web mapping.</div>
-            </div>
-          </aside>
         </div>
       </section>
       <section class="section alt portfolio-case" id="homelessness" aria-labelledby="homelessness-heading">
@@ -169,9 +166,11 @@
             <p class="lead">Homelessness varies by intensity, growth, and structure across states.</p>
             <p>This project compares state-level homelessness using total count, population-adjusted rate, change from 2020 to 2024, and unsheltered percentage.</p>
             <div class="callout"><strong>Important concept</strong>Raw counts show burden. Rates show intensity.</div>
+            <h3>Overview</h3>
+            <p>Most states show low to moderate homelessness rates, while a smaller number of states drive national extremes. This project compares homelessness by total burden, population-adjusted intensity, change over time, and shelter status.</p>
             <h3>Visual Analysis</h3>
             <p>The following maps and charts compare homelessness by total count, population-adjusted rate, rate change, and unsheltered share.</p>
-            <h3>Total Count vs Homelessness Rate</h3>
+            <h4>Total Count vs Homelessness Rate</h4>
             <div class="image-slider" data-image-slider tabindex="0" aria-label="Compare homelessness total count and rate maps">
               <div class="slider-track" aria-live="polite">
                 <figure class="slider-slide" aria-hidden="false">
@@ -193,7 +192,7 @@
               </div>
             <p class="caption">Use the slider to compare two perspectives. Total counts show where the largest number of people are experiencing homelessness, while rates show where homelessness is most intense relative to population.</p>
             </div>
-            <h3>Where the Crisis Is Accelerating</h3>
+            <h4>Change in Homelessness Rate</h4>
             <p>Change in homelessness rate can be read in two ways. Absolute change shows how much the rate increased or decreased, while standard deviation change shows which states stand out as unusual compared with the national pattern.</p>
             <div class="image-slider" data-image-slider tabindex="0" aria-label="Compare absolute and relative change in homelessness rate maps">
               <div class="slider-track" aria-live="polite">
@@ -219,7 +218,7 @@
             <h3>Structural Differences: Sheltered vs. Unsheltered Homelessness</h3>
             <p>Homelessness is not only a question of scale. States with similar homelessness rates can differ sharply in how homelessness is experienced. The unsheltered share shows where people are more likely to be outside the shelter system, while the bubble chart compares rate, unsheltered share, and total count together.</p>
             <div class="visual-card-grid stacked-visuals">
-              <figure class="visual-card">
+              <figure class="visual-card supporting-chart">
                 <h4>Rate vs. Unsheltered Share, 2024</h4>
                 <img src="./assets/charts/homelessness-us/homelessness-rate-unsheltered-bubble-2024.png" alt="Bubble chart comparing homelessness rate per 10,000 people and unsheltered share percentage by U.S. state in 2024, with bubble size representing total homeless count. States such as California, Oregon, Washington, Hawaii, District of Columbia, New York, Texas, and Florida are labelled." loading="lazy">
                 <figcaption>This chart compares three dimensions at once: homelessness rate, unsheltered share, and total homeless count. California and Oregon show high unsheltered shares, while New York has a high homelessness rate but a much lower unsheltered share, showing a different structure of homelessness.</figcaption>
@@ -231,6 +230,7 @@
               </figure>
             </div>
             <div class="callout"><strong>Structural insight</strong>Same scale of problem, different structure. A high homelessness rate does not always mean a high unsheltered share, so policy responses should account for both intensity and shelter conditions.</div>
+            <p>This analysis helps separate where homelessness is largest, where it is most intense, where it is accelerating, and where unsheltered homelessness changes the policy response.</p>
             <h3>Analysis Focus</h3>
             <p>The project distinguishes large total counts from high per-capita intensity and uses change and unsheltered share to describe different forms of state-level housing pressure.</p>
             <h3>Methods</h3>
@@ -243,18 +243,8 @@
             </ul>
             <h3>Limitations / Next Step</h3>
             <p>Point-in-time counts are sensitive to local methods, timing, and definitions. Interpretation should account for differences in enumeration practices and local shelter systems.</p>
-            <p class="future-note">Standalone project page is retained for future expansion, but V1 prioritizes this single-page portfolio flow.</p>
+            <p>This project shows why homelessness should be evaluated by scale, intensity, change, and shelter structure rather than by total counts alone.</p>
           </article>
-          <aside class="content-panel">
-            <h3>Visual Analysis</h3>
-            <p>The section uses static maps and charts to compare total count, rate, change, and unsheltered share.</p>
-            <div class="mini-facts">
-              <div>Homelessness rate map</div>
-              <div>Total count vs rate comparison</div>
-              <div>Change from 2020-2024</div>
-              <div>Unsheltered percentage</div>
-            </div>
-          </aside>
         </div>
       </section>
       <section class="section portfolio-case" id="breast-cancer-mortality" aria-labelledby="breast-cancer-heading">
@@ -263,33 +253,63 @@
             <p class="case-kicker">United States counties | Public health</p>
             <h2 id="breast-cancer-heading">Racial Disparities in Breast Cancer Mortality in the U.S.</h2>
             <p class="lead">Racial disparities in breast cancer mortality are spatially structured, not random.</p>
-            <p>This project compares Black and White breast cancer mortality rates in counties where both values are available and evaluates whether disparities cluster spatially.</p>
-            <div class="callout"><strong>Key insight</strong>Breast cancer mortality disparities are spatially clustered, not randomly distributed.</div>
+            <p>This project compares Black and White breast cancer mortality rates in counties where both values are available and maps where direct comparison is possible.</p>
+            <div class="callout"><strong>Key insight</strong>Comparable-county ratios reveal where Black-to-White mortality differences can be evaluated directly, while suppression limits complete national comparison.</div>
             <h3>Analysis Focus</h3>
             <p>A mortality ratio greater than 1 means Black mortality is higher than White mortality in that county. Dual-data counties are required because suppressed low-count data means some counties cannot be compared directly.</p>
+            <h3>Visual Analysis</h3>
+            <div class="visual-card-grid stacked-visuals">
+              <figure class="visual-card">
+                <h4>Overall mortality context</h4>
+                <img src="./assets/maps/breast-cancer-mortality/breast-cancer-all-races-mortality-2019-2023.png" alt="County-level map of all-races female breast cancer mortality rates in the United States for 2019 to 2023, with Alaska and Hawaii shown as insets." loading="lazy">
+                <figcaption>This map shows county-level female breast cancer mortality rates for all races and ethnicities where data are available. It provides mortality context before comparing race-specific disparities.</figcaption>
+                <a class="map-full-link" href="./assets/maps/breast-cancer-mortality/breast-cancer-all-races-mortality-2019-2023.png" target="_blank" rel="noopener">Open full-size map</a>
+              </figure>
+              <figure class="visual-card">
+                <h4>Race-specific data coverage</h4>
+                <img src="./assets/maps/breast-cancer-mortality/breast-cancer-data-coverage-2019-2023.png" alt="County-level map showing where Black and White non-Hispanic breast cancer mortality rates are available or suppressed for direct comparison." loading="lazy">
+                <figcaption>Race-specific county mortality data are incomplete because low-count values are suppressed. Direct Black-to-White comparison is only possible in counties where both Black and White non-Hispanic rates are available.</figcaption>
+                <a class="map-full-link" href="./assets/maps/breast-cancer-mortality/breast-cancer-data-coverage-2019-2023.png" target="_blank" rel="noopener">Open full-size map</a>
+              </figure>
+              <figure class="visual-card">
+                <h4>Comparable-county mortality ratio</h4>
+                <img src="./assets/maps/breast-cancer-mortality/breast-cancer-mortality-ratio-2019-2023.png" alt="County-level map of the Black-to-White female breast cancer mortality ratio for counties with comparable Black and White non-Hispanic mortality rates." loading="lazy">
+                <figcaption>This map shows the Black-to-White female breast cancer mortality ratio for comparable counties. A ratio greater than 1 means Black mortality is higher than White mortality in that county.</figcaption>
+                <a class="map-full-link" href="./assets/maps/breast-cancer-mortality/breast-cancer-mortality-ratio-2019-2023.png" target="_blank" rel="noopener">Open full-size map</a>
+              </figure>
+            </div>
+            <div class="callout">
+              <strong>Key findings</strong>
+              <ul class="compact-list">
+                <li>Only 320 counties have both Black and White non-Hispanic mortality rates available for direct comparison.</li>
+                <li>Among comparable counties, 299 counties have a Black-to-White mortality ratio greater than 1.</li>
+                <li>The average mortality ratio among comparable counties is 1.44.</li>
+                <li>The ratio map shows where direct county-level comparison is possible, while the coverage map shows why the analysis cannot be treated as a complete national county map.</li>
+              </ul>
+            </div>
+            <div class="callout warning"><strong>Limitation note</strong>Only 320 counties have both Black and White non-Hispanic mortality rates available for direct comparison. The ratio map should therefore be interpreted as a comparable-county analysis, not a complete national county map.</div>
             <h3>Methods</h3>
-            <p>Filter to comparable counties, calculate Black-to-White mortality ratios, map disparity patterns, and use hot spot analysis to evaluate spatial clustering.</p>
+            <p>Filter to comparable counties, calculate Black-to-White mortality ratios, map disparity patterns, and prepare the dataset for future spatial clustering analysis.</p>
             <h3>Data Sources</h3>
             <ul class="compact-list">
               <li>U.S. Cancer Statistics county-level mortality data</li>
               <li>U.S. Census population data</li>
               <li>County boundary layers</li>
-              <li>Project-derived Black-to-White mortality ratio and hot spot analysis outputs</li>
+              <li>Project-derived Black-to-White mortality ratio calculations</li>
             </ul>
             <h3>Limitations / Next Step</h3>
-            <p>Suppression and county-level aggregation limit interpretation. Final static map exports will be added before public release, along with suppression rules, ratio calculation notes, and hot spot parameters.</p>
-            <p class="future-note">Standalone project page is retained for future expansion, but V1 prioritizes this single-page portfolio flow.</p>
+            <p>Suppression and county-level aggregation limit interpretation. The maps should be read as county-level screening tools for spatial pattern recognition, not as evidence of individual risk or causal pathways.</p>
+            <p>This analysis is useful as a county-level screening tool for identifying where comparable mortality disparities can be mapped and where suppression limits interpretation.</p>
+            <p>A future next step is to run and document a defensible spatial clustering workflow after the comparable-county dataset is finalized.</p>
+            <p>This project shows how disparity mapping must account for both visible mortality patterns and the limits created by suppressed county-level data.</p>
           </article>
-          <aside class="content-panel">
-            <h3>Future Map Outputs</h3>
-            <p>Final static map exports will be added before public release.</p>
-            <div class="mini-facts planned-visual-list">
-              <div><strong>Planned visual</strong><br>Data coverage / overall mortality</div>
-              <div><strong>Planned visual</strong><br>Mortality ratio visual</div>
-              <div><strong>Planned visual</strong><br>Disparity map</div>
-              <div><strong>Planned visual</strong><br>Hot spot analysis</div>
-            </div>
-          </aside>
+        </div>
+      </section>
+      <section class="section closing-cta" aria-labelledby="gis-contact-heading">
+        <div class="container content-panel">
+          <h2 id="gis-contact-heading">Interested in GIS, spatial analysis, or public-interest mapping work?</h2>
+          <p>I’m looking for junior GIS analyst opportunities where I can apply spatial analysis, data cleaning, cartography, and web mapping to real-world planning, public health, housing, sustainability, and community problems.</p>
+          <a class="button" href="./contact/">Contact</a>
         </div>
       </section>
     </main>
@@ -297,11 +317,7 @@
       <div class="container footer-grid">
         <p>&copy; 2026 Alok Revi. GIS portfolio.</p>
         <div class="footer-links">
-          <!-- TODO: Replace placeholder links with final URLs. -->
           <a href="./contact/">Contact</a>
-          <a href="TODO_ADD_RESUME">Resume</a>
-          <a href="TODO_ADD_LINKEDIN">LinkedIn</a>
-          <a href="TODO_ADD_GITHUB">GitHub</a>
         </div>
       </div>
     </footer>
@@ -310,7 +326,5 @@
     <script src="./js/food-access-map.js"></script>
   </body>
 </html>
-
-
 
 

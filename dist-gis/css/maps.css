@@ -208,6 +208,11 @@
   padding: 0.9rem 1rem;
 }
 
+.map-note.neutral {
+  background: var(--color-accent-soft);
+  border-color: rgba(47, 127, 115, 0.28);
+}
+
 .map-popup-title {
   color: var(--color-text);
   display: block;

@@ -11,11 +11,11 @@
     <a class="skip-link" href="#main">Skip to content</a>
     <header class="site-header">
       <div class="container nav-wrap">
-        <a class="site-brand" href="../">Alok Revi</a>
+        <a class="site-brand" href="/">Alok Revi</a>
         <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" data-nav-toggle>Menu</button>
         <nav class="site-nav" id="site-nav" aria-label="Primary navigation" data-site-nav>
-          <a href="../">GIS Portfolio</a>
-          <a href="../food-access-dc/">Food Access</a>
+          <a href="/">Home</a>
+          <a href="../" aria-current="page">GIS Portfolio</a>
           <a href="../about/">About</a>
           <a href="../contact/">Contact</a>
         </nav>
@@ -34,43 +34,46 @@
           <article>
             <section class="case-section">
               <h2>Context / Why It Matters</h2>
-              <p>Racial disparities in breast cancer mortality are spatially structured, not random. Mapping county-level differences can help communicate where public health burdens cluster and where further investigation is warranted.</p>
-              <div class="callout"><strong>Key insight</strong>Breast cancer mortality disparities are spatially clustered, not randomly distributed.</div>
+              <p>Mapping county-level differences can help communicate where direct Black-to-White breast cancer mortality comparisons are possible and where suppression limits interpretation.</p>
+              <div class="callout"><strong>Key insight</strong>Comparable-county ratios reveal where Black-to-White mortality differences can be evaluated directly, while suppression limits complete national comparison.</div>
             </section>
             <section class="case-section">
               <h2>Main Visuals</h2>
-              <div class="visual-grid">
-                <figure>
-                  <div class="visual-placeholder" role="img" aria-label="Planned visual card for breast cancer mortality data coverage">Data coverage / overall mortality<small>TODO image: assets/maps/breast-cancer-mortality/breast-cancer-data-coverage.png</small></div>
-                  <figcaption>Coverage and overall mortality visual. Final static map exports will be added before public release.</figcaption>
+              <div class="visual-card-grid stacked-visuals">
+                <figure class="visual-card">
+                  <h3>All-Races Female Breast Cancer Mortality, 2019-2023</h3>
+                  <img src="../assets/maps/breast-cancer-mortality/breast-cancer-all-races-mortality-2019-2023.png" alt="County-level map of all-races female breast cancer mortality rates in the United States for 2019 to 2023, with Alaska and Hawaii shown as insets." loading="lazy">
+                  <figcaption>This map shows county-level female breast cancer mortality rates for all races and ethnicities where data are available. It provides mortality context before comparing race-specific disparities.</figcaption>
+                  <a class="map-full-link" href="../assets/maps/breast-cancer-mortality/breast-cancer-all-races-mortality-2019-2023.png" target="_blank" rel="noopener">Open full-size map</a>
                 </figure>
-                <figure>
-                  <div class="visual-placeholder" role="img" aria-label="Planned visual card for breast cancer mortality ratio">Mortality ratio visual<small>TODO image: assets/maps/breast-cancer-mortality/breast-cancer-mortality-ratio.png</small></div>
-                  <figcaption>Black-to-White mortality rate ratio visual. Final static map exports will be added before public release.</figcaption>
+                <figure class="visual-card">
+                  <h3>Data Coverage and Suppression, 2019-2023</h3>
+                  <img src="../assets/maps/breast-cancer-mortality/breast-cancer-data-coverage-2019-2023.png" alt="County-level map showing where Black and White non-Hispanic breast cancer mortality rates are available or suppressed for direct comparison." loading="lazy">
+                  <figcaption>Race-specific county mortality data are incomplete because low-count values are suppressed. Direct Black-to-White comparison is only possible in counties where both Black and White non-Hispanic rates are available.</figcaption>
+                  <a class="map-full-link" href="../assets/maps/breast-cancer-mortality/breast-cancer-data-coverage-2019-2023.png" target="_blank" rel="noopener">Open full-size map</a>
                 </figure>
-                <figure>
-                  <div class="visual-placeholder" role="img" aria-label="Planned visual card for breast cancer disparity map">Disparity map<small>TODO image: assets/maps/breast-cancer-mortality/breast-cancer-disparity-map.png</small></div>
-                  <figcaption>Planned county disparity map.</figcaption>
-                </figure>
-                <figure>
-                  <div class="visual-placeholder" role="img" aria-label="Planned visual card for breast cancer mortality hot spot analysis">Hot spot analysis<small>TODO image: assets/maps/breast-cancer-mortality/breast-cancer-hotspot-analysis.png</small></div>
-                  <figcaption>Planned hot spot analysis visual.</figcaption>
+                <figure class="visual-card">
+                  <h3>Black-to-White Mortality Ratio, 2019-2023</h3>
+                  <img src="../assets/maps/breast-cancer-mortality/breast-cancer-mortality-ratio-2019-2023.png" alt="County-level map of the Black-to-White female breast cancer mortality ratio for counties with comparable Black and White non-Hispanic mortality rates." loading="lazy">
+                  <figcaption>This map shows the Black-to-White female breast cancer mortality ratio for comparable counties. A ratio greater than 1 means Black mortality is higher than White mortality in that county.</figcaption>
+                  <a class="map-full-link" href="../assets/maps/breast-cancer-mortality/breast-cancer-mortality-ratio-2019-2023.png" target="_blank" rel="noopener">Open full-size map</a>
                 </figure>
               </div>
             </section>
             <section class="case-section">
               <h2>Analysis</h2>
               <p>The analysis compares Black and White breast cancer mortality rates where both values are available for the same county. A mortality ratio greater than 1 means Black mortality is higher than White mortality in that county.</p>
-              <p>Dual-data counties are necessary because a ratio cannot be calculated where one group has suppressed or missing mortality data. The Southeastern U.S. clustering insight should be presented carefully after final maps and hot spot outputs are inserted.</p>
+              <p>Dual-data counties are necessary because a ratio cannot be calculated where one group has suppressed or missing mortality data. The ratio map should be read as a comparable-county analysis rather than a complete national county map.</p>
               <div class="callout warning"><strong>Limitation note</strong>Suppressed low-count data means some counties cannot be compared directly.</div>
+              <div class="callout warning"><strong>Comparable-county note</strong>Only 320 counties have both Black and White non-Hispanic mortality rates available for direct comparison. The ratio map should therefore be interpreted as a comparable-county analysis, not a complete national county map.</div>
             </section>
             <section class="case-section">
               <h2>Methods</h2>
-              <p>Filter to counties with both Black and White mortality values, calculate the mortality rate ratio, map the disparity measure, and run hot spot analysis to identify statistically structured clustering.</p>
+              <p>Filter to counties with both Black and White mortality values, calculate the mortality rate ratio, map the disparity measure, and prepare the dataset for future spatial clustering analysis.</p>
             </section>
             <section class="case-section">
               <h2>Tools Used</h2>
-              <p>ArcGIS Pro, public health rate data, county joins, ratio calculation, hot spot analysis, static cartographic exports.</p>
+              <p>ArcGIS Pro, public health rate data, county joins, ratio calculation, suppression review, static cartographic exports.</p>
             </section>
             <section class="case-section">
               <h2>Limitations</h2>
@@ -78,11 +81,11 @@
             </section>
             <section class="case-section">
               <h2>Data Sources</h2>
-              <p>U.S. Cancer Statistics county-level mortality data; U.S. Census population data; county boundary layers; project-derived Black-to-White mortality ratio and hot spot analysis outputs.</p>
+              <p>U.S. Cancer Statistics county-level mortality data; U.S. Census population data; county boundary layers; project-derived Black-to-White mortality ratio calculations.</p>
             </section>
             <section class="case-section">
               <h2>Conclusion / Next Step</h2>
-              <p>The next step is to add final exports and document the data suppression logic, ratio formula, and hot spot settings used in the analysis.</p>
+              <p>The next step is to document the data suppression logic, ratio formula, and a defensible spatial clustering workflow so the map interpretation remains reproducible.</p>
               <a class="back-link" href="../">Back to GIS Portfolio</a>
             </section>
           </article>
@@ -90,8 +93,8 @@
             <h2>Quick Facts</h2>
             <dl class="fact-list">
               <div><dt>Research question</dt><dd>Where are Black and White breast cancer mortality differences spatially concentrated?</dd></div>
-              <div><dt>Key insight</dt><dd>Breast cancer mortality disparities are spatially clustered, not randomly distributed.</dd></div>
-              <div><dt>Tools used</dt><dd>ArcGIS Pro, mortality ratios, county joins, hot spot analysis.</dd></div>
+              <div><dt>Key insight</dt><dd>Comparable-county ratios reveal where Black-to-White mortality differences can be evaluated directly.</dd></div>
+              <div><dt>Tools used</dt><dd>ArcGIS Pro, mortality ratios, county joins, suppression review.</dd></div>
               <div><dt>Data sources</dt><dd>Documented public source data and project-derived calculations.</dd></div>
             </dl>
           </aside>
@@ -102,15 +105,12 @@
       <div class="container footer-grid">
         <p>&copy; 2026 Alok Revi. GIS portfolio.</p>
         <div class="footer-links">
-          <!-- TODO: Replace placeholder links with final URLs. -->
           <a href="../contact/">Contact</a>
-          <a href="TODO_ADD_RESUME">Resume</a>
-          <a href="TODO_ADD_LINKEDIN">LinkedIn</a>
-          <a href="TODO_ADD_GITHUB">GitHub</a>
         </div>
       </div>
     </footer>
     <script src="../js/main.js"></script>
   </body>
 </html>
+
 
