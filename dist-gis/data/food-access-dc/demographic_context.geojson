@@ -1,0 +1,28 @@
+{
+  "type": "FeatureCollection",
+  "name": "demographic_context_placeholder",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Sample Southeast D.C. equity context area",
+        "category": "Placeholder demographic context",
+        "snap_status": "Context layer",
+        "address": "Replace with real demographic geography",
+        "neighbourhood": "Southeast Washington"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [-77.021, 38.887],
+            [-76.93, 38.887],
+            [-76.93, 38.835],
+            [-77.021, 38.835],
+            [-77.021, 38.887]
+          ]
+        ]
+      }
+    }
+  ]
+}

@@ -6,20 +6,20 @@
     <title>GIS Portfolio | Alok Revi</title>
     <meta name="description" content="GIS portfolio projects by Alok Revi focused on inequality, access, housing, public health, and public-interest decision-making.">
     <link rel="stylesheet" href="https://unpkg.com/maplibre-gl@5.8.0/dist/maplibre-gl.css">
-    <link rel="stylesheet" href="/css/style.css">
-    <link rel="stylesheet" href="/css/maps.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/maps.css">
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
     <header class="site-header">
       <div class="container nav-wrap">
-        <a class="site-brand" href="/">Alok Revi</a>
+        <a class="site-brand" href="./">Alok Revi</a>
         <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" data-nav-toggle>Menu</button>
         <nav class="site-nav" id="site-nav" aria-label="Primary navigation" data-site-nav>
-          <a href="/">Home</a>
-          <a href="/gis/" aria-current="page">GIS Portfolio</a>
-          <a href="/about/">About</a>
-          <a href="/contact/">Contact</a>
+          <a href="./" aria-current="page">GIS Portfolio</a>
+          <a href="#food-access">Food Access</a>
+          <a href="./about/">About</a>
+          <a href="./contact/">Contact</a>
         </nav>
       </div>
     </header>
@@ -108,7 +108,7 @@
                   <label><input type="checkbox" data-food-layer="farmers-markets-circle" aria-label="Toggle farmers markets layer"> Farmers markets</label>
                   <label><input type="checkbox" checked data-food-layer="dc-boundary-line" aria-label="Toggle D.C. boundary layer"> D.C. boundary</label>
                 </aside>
-                <div id="food-access-map" data-food-access-data-path="../data/food-access-dc/" role="region" aria-label="Interactive map of food access locations, poverty context, and candidate access gaps in Washington, D.C."></div>
+                <div id="food-access-map" data-food-access-data-path="./data/food-access-dc/" role="region" aria-label="Interactive map of food access locations, poverty context, and candidate access gaps in Washington, D.C."></div>
                 <aside class="map-panel map-legend-panel" id="food-access-legend-panel" aria-label="Food access map legend">
                   <h4>Legend</h4>
                   <div class="poverty-legend" aria-label="Poverty percentage legend">
@@ -175,11 +175,11 @@
             <div class="image-slider" data-image-slider tabindex="0" aria-label="Compare homelessness total count and rate maps">
               <div class="slider-track" aria-live="polite">
                 <figure class="slider-slide" aria-hidden="false">
-                  <img src="../assets/maps/homelessness-us/homelessness-total-count-2024.png" alt="Map showing total homeless people by U.S. state in 2024, with the highest totals visible in states such as California, New York, Texas, Florida, and Washington." loading="lazy">
+                  <img src="./assets/maps/homelessness-us/homelessness-total-count-2024.png" alt="Map showing total homeless people by U.S. state in 2024, with the highest totals visible in states such as California, New York, Texas, Florida, and Washington." loading="lazy">
                   <figcaption>Total Homeless People, 2024</figcaption>
                 </figure>
                 <figure class="slider-slide" aria-hidden="true">
-                  <img src="../assets/maps/homelessness-us/homelessness-rate-2024.png" alt="Map showing homelessness rate per 10,000 people by U.S. state in 2024, with higher rates concentrated in places such as New York, Vermont, Hawaii, California, Oregon, and Alaska." loading="lazy">
+                  <img src="./assets/maps/homelessness-us/homelessness-rate-2024.png" alt="Map showing homelessness rate per 10,000 people by U.S. state in 2024, with higher rates concentrated in places such as New York, Vermont, Hawaii, California, Oregon, and Alaska." loading="lazy">
                   <figcaption>Homelessness Rate per 10,000 People, 2024</figcaption>
                 </figure>
               </div>
@@ -198,11 +198,11 @@
             <div class="image-slider" data-image-slider tabindex="0" aria-label="Compare absolute and relative change in homelessness rate maps">
               <div class="slider-track" aria-live="polite">
                 <figure class="slider-slide" aria-hidden="false">
-                  <img src="../assets/maps/homelessness-us/homelessness-rate-difference-2020-2024.png" alt="Map showing the absolute difference in homelessness rate by U.S. state between 2020 and 2024, with stronger increases visible in states such as New York, Vermont, Hawaii, Oregon, Illinois, Colorado, and New Mexico." loading="lazy">
+                  <img src="./assets/maps/homelessness-us/homelessness-rate-difference-2020-2024.png" alt="Map showing the absolute difference in homelessness rate by U.S. state between 2020 and 2024, with stronger increases visible in states such as New York, Vermont, Hawaii, Oregon, Illinois, Colorado, and New Mexico." loading="lazy">
                   <figcaption>Difference in Homelessness Rate, 2020-2024</figcaption>
                 </figure>
                 <figure class="slider-slide" aria-hidden="true">
-                  <img src="../assets/maps/homelessness-us/homelessness-rate-change-standard-deviation-2020-2024.png" alt="Map showing change in homelessness rate by U.S. state using standard deviation classes, highlighting which states increased or decreased more strongly relative to the national pattern." loading="lazy">
+                  <img src="./assets/maps/homelessness-us/homelessness-rate-change-standard-deviation-2020-2024.png" alt="Map showing change in homelessness rate by U.S. state using standard deviation classes, highlighting which states increased or decreased more strongly relative to the national pattern." loading="lazy">
                   <figcaption>Relative Change in Homelessness Rate, 2020-2024</figcaption>
                 </figure>
               </div>
@@ -221,12 +221,12 @@
             <div class="visual-card-grid stacked-visuals">
               <figure class="visual-card">
                 <h4>Rate vs. Unsheltered Share, 2024</h4>
-                <img src="../assets/charts/homelessness-us/homelessness-rate-unsheltered-bubble-2024.png" alt="Bubble chart comparing homelessness rate per 10,000 people and unsheltered share percentage by U.S. state in 2024, with bubble size representing total homeless count. States such as California, Oregon, Washington, Hawaii, District of Columbia, New York, Texas, and Florida are labelled." loading="lazy">
+                <img src="./assets/charts/homelessness-us/homelessness-rate-unsheltered-bubble-2024.png" alt="Bubble chart comparing homelessness rate per 10,000 people and unsheltered share percentage by U.S. state in 2024, with bubble size representing total homeless count. States such as California, Oregon, Washington, Hawaii, District of Columbia, New York, Texas, and Florida are labelled." loading="lazy">
                 <figcaption>This chart compares three dimensions at once: homelessness rate, unsheltered share, and total homeless count. California and Oregon show high unsheltered shares, while New York has a high homelessness rate but a much lower unsheltered share, showing a different structure of homelessness.</figcaption>
               </figure>
               <figure class="visual-card">
                 <h4>Percentage of Homeless People Who Are Unsheltered, 2024</h4>
-                <img src="../assets/maps/homelessness-us/homelessness-unsheltered-2024.png" alt="Choropleth map showing the percentage of homeless people who are unsheltered by U.S. state in 2024, with higher unsheltered shares visible in many western and southern states." loading="lazy">
+                <img src="./assets/maps/homelessness-us/homelessness-unsheltered-2024.png" alt="Choropleth map showing the percentage of homeless people who are unsheltered by U.S. state in 2024, with higher unsheltered shares visible in many western and southern states." loading="lazy">
                 <figcaption>This map shows where a larger share of people experiencing homelessness are unsheltered. Higher unsheltered shares appear across many western and southern states, while some northeastern states show lower unsheltered shares despite high overall homelessness rates.</figcaption>
               </figure>
             </div>
@@ -298,7 +298,7 @@
         <p>&copy; 2026 Alok Revi. GIS portfolio.</p>
         <div class="footer-links">
           <!-- TODO: Replace placeholder links with final URLs. -->
-          <a href="/contact/">Contact</a>
+          <a href="./contact/">Contact</a>
           <a href="TODO_ADD_RESUME">Resume</a>
           <a href="TODO_ADD_LINKEDIN">LinkedIn</a>
           <a href="TODO_ADD_GITHUB">GitHub</a>
@@ -306,8 +306,11 @@
       </div>
     </footer>
     <script src="https://unpkg.com/maplibre-gl@5.8.0/dist/maplibre-gl.js"></script>
-    <script src="/js/main.js"></script>
-    <script src="/js/food-access-map.js"></script>
+    <script src="./js/main.js"></script>
+    <script src="./js/food-access-map.js"></script>
   </body>
 </html>
+
+
+
 

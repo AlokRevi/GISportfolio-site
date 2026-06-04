@@ -10,8 +10,8 @@ This is Version 1 of a static GIS portfolio website for AlokRevi.com. The site p
 - GIS portfolio hub.
 - Three GIS case study pages.
 - One MapLibre GL JS interactive map for Food Access in Washington, D.C.
-- Styled placeholder visual blocks for Homelessness and Breast Cancer Mortality exports.
-- Placeholder GeoJSON for Food Access map layers.
+- Structured visual sections for Homelessness and Breast Cancer Mortality exports.
+- GeoJSON files for Food Access map layers.
 - Static-first implementation with no build process.
 
 ## Tech Stack
@@ -20,7 +20,7 @@ This is Version 1 of a static GIS portfolio website for AlokRevi.com. The site p
 - Plain CSS
 - Plain JavaScript
 - MapLibre GL JS via CDN on the Food Access page
-- GeoJSON placeholder data
+- GeoJSON map data
 - Static map/chart placeholders
 
 No framework, build tool, backend, database, CMS, or login is included.
@@ -104,7 +104,7 @@ V1 uses styled placeholder blocks so the site does not show broken images before
 
 ## Replacing Placeholder GeoJSON
 
-The Food Access map currently uses sample placeholder files:
+The Food Access map uses web-ready GeoJSON files:
 
 - `data/food-access-dc/snap_locations.geojson`
 - `data/food-access-dc/non_snap_locations.geojson`
@@ -137,9 +137,10 @@ Use the project root as the published directory. Confirm that direct links such 
 
 ## Roadmap
 
-- Replace Food Access placeholder GeoJSON with validated ArcGIS Pro exports.
+- Maintain Food Access GeoJSON from validated GIS exports.
 - Replace static visual placeholders with final map and chart images.
 - Add final source citations to the data README files.
 - Add real Resume, LinkedIn, GitHub, and email links.
 - Add project thumbnails after final cartography is available.
 - Review copy against final results so no placeholder language remains on the public version.
+
