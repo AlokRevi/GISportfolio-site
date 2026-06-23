@@ -4,3 +4,36 @@ out/
 dist/
 .DS_Store
 Thumbs.db
+
+# IDE
+.idea/
+
+# Python cache
+**pycache**/
+*.pyc
+
+# Local/export clutter
+*.zip
+h origin main
+*_map_build_summary.txt
+
+# Screenshots and temporary image exports
+Screenshot*.png
+Screenshot*.webp
+**/Screenshot*.png
+**/Screenshot*.webp
+assets/thumbnails/*.png
+dist-gis/assets/thumbnails/*.png
+
+# Duplicate/generated thumbnail working folders
+assets/thumbnails/compressed/
+dist-gis/assets/thumbnails/compressed/
+
+# Untracked duplicate deploy export
+deploy-gisportfolio-site/
+
+# Raw GIS processing outputs - keep source-controlled only if intentionally published
+data/food-access-dc/food-access-dc-access-gap-analysis/
+data/food-access-dc/food-access-dc-stage1/
+data/food-access-dc/food-access-dc-stage2-demographics/
+data/breast-cancer-mortality/breast_cancer_joined_cb2023_outputs/
