@@ -867,6 +867,27 @@ ol {
   padding-left: 1.1rem;
 }
 
+.tools-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  list-style: none;
+  margin: 0.25rem 0 1rem;
+  max-width: var(--text-width);
+  padding: 0;
+}
+
+.tools-list li {
+  background: #f7faf9;
+  border: 1px solid var(--color-border);
+  border-radius: 999px;
+  color: var(--color-muted);
+  font-size: 0.84rem;
+  font-weight: 750;
+  line-height: 1.2;
+  padding: 0.34rem 0.62rem;
+}
+
 
 .future-note {
   color: var(--color-muted);
@@ -1473,6 +1494,13 @@ figcaption {
 
 .closing-cta p {
   max-width: var(--text-width);
+}
+
+.cta-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+  margin-top: 1rem;
 }
 
 @media (max-width: 860px) {
