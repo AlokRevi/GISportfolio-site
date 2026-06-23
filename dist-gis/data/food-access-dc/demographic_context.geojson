@@ -1,6 +1,6 @@
 {
   "type": "FeatureCollection",
-  "name": "demographic_context_sample",
+  "name": "demographic_context_placeholder",
   "features": [
     {
       "type": "Feature",
@@ -26,4 +26,3 @@
     }
   ]
 }
-

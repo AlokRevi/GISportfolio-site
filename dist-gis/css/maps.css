@@ -1,7 +1,11 @@
 
 .map-section {
   grid-column: 1 / -1;
-  margin: 1.5rem 0;
+  margin: 1rem 0 1.5rem;
+}
+
+#food-access-map {
+  scroll-margin-top: 92px;
 }
 
 .story-view-controls {
@@ -13,10 +17,10 @@
 }
 
 .story-view-button {
-  background: linear-gradient(180deg, #ffffff, #f6faf9);
-  border: 1px solid var(--color-border);
+  background: linear-gradient(180deg, #f0faf7, #dcefeb);
+  border: 1px solid rgba(47, 127, 115, 0.36);
   border-radius: 14px;
-  color: var(--color-text);
+  color: var(--color-accent-dark);
   cursor: pointer;
   font: inherit;
   font-weight: 800;
@@ -29,29 +33,30 @@
 .story-view-button:hover,
 .story-view-button:focus-visible,
 .story-view-button[aria-pressed="true"] {
-  background: var(--color-accent);
+  background: linear-gradient(180deg, var(--color-accent), var(--color-accent-dark));
   border-color: var(--color-accent);
   box-shadow: 0 12px 26px rgba(47, 127, 115, 0.18);
   color: #ffffff;
 }
 
 .map-controls-toggle {
-  background: var(--color-text);
-  border: 1px solid var(--color-text);
+  background: rgba(255, 255, 255, 0.76);
+  border: 1px solid var(--color-border);
   border-radius: 999px;
-  color: #ffffff;
+  color: var(--color-muted);
   cursor: pointer;
   font: inherit;
-  font-size: 0.92rem;
-  font-weight: 800;
+  font-size: 0.86rem;
+  font-weight: 700;
   margin: 0 0 0.85rem;
-  padding: 0.6rem 0.85rem;
+  padding: 0.48rem 0.75rem;
 }
 
 .map-controls-toggle:hover,
 .map-controls-toggle:focus-visible {
-  background: var(--color-accent-dark);
-  border-color: var(--color-accent-dark);
+  background: var(--color-surface);
+  border-color: rgba(47, 127, 115, 0.34);
+  color: var(--color-accent-dark);
 }
 
 .food-access-map-card {

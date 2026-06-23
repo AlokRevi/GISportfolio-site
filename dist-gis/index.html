@@ -13,13 +13,11 @@
     <a class="skip-link" href="#main">Skip to content</a>
     <header class="site-header">
       <div class="container nav-wrap">
-        <a class="site-brand" href="https://alokrevi.com/">Alok Revi</a>
+        <a class="site-brand" href="./">Alok Revi</a>
         <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" data-nav-toggle>Menu</button>
         <nav class="site-nav" id="site-nav" aria-label="Primary navigation" data-site-nav>
-          <a href="https://alokrevi.com/">Home</a>
           <a href="./" aria-current="page">GIS Portfolio</a>
           <a href="./about/">About</a>
-          <a href="./contact/">Contact</a>
         </nav>
       </div>
     </header>
@@ -29,54 +27,70 @@
           <p class="eyebrow">Selected GIS Work</p>
           <h1>Alok Revi</h1>
           <p class="hero-subtitle">GIS Analyst | Spatial Analysis | Web Mapping</p>
-          <p class="lead">I use GIS to reveal public-interest patterns that are hard to see in raw data alone — turning data preparation, spatial analysis, cartographic design, and interpretation into clear visual stories.</p>
-          <div class="hero-actions">
-            <a class="button" href="#case-studies">View case studies &rarr;</a>
-            <a class="button secondary" href="./contact/">Contact</a>
-          </div>
-          <p class="proof-strip">3 case studies <span>•</span> Interactive web mapping <span>•</span> ArcGIS Pro <span>•</span> MapLibre GL JS <span>•</span> GeoJSON <span>•</span> Public-interest data</p>
+          <p class="lead">I use GIS for public-interest spatial analysis that makes patterns in access, housing, and health easier to see and act on.</p>
         </div>
       </section>
-      <section class="section" id="case-studies" aria-labelledby="case-studies-heading">
+      <section class="section gis-case-studies" id="case-studies" aria-label="GIS case studies">
         <div class="container">
-          <div class="section-heading">
-            <div>
-              <p class="eyebrow">Portfolio Cases</p>
-              <h2 id="case-studies-heading">Three public-interest GIS case studies</h2>
-            </div>
-          </div>
           <div class="grid three">
             <article class="project-card">
-              <div class="thumbnail-preview food-card">Interactive access map</div>
+              <div class="thumbnail-preview food-card">
+                <img src="./assets/thumbnails/food-access-dc-thumb.webp" alt="Map preview showing food access locations in Washington, D.C." loading="eager" onerror="this.hidden=true">
+                <span>Interactive access map</span>
+              </div>
               <div class="project-card-body">
-                <p class="meta">Washington, D.C. | Food access</p>
+                <p class="geo-badge"><span aria-hidden="true">⌖</span> Washington, D.C.</p>
+                <p class="meta">Food access</p>
                 <h2>Food Access in Washington, D.C.</h2>
+                <ul class="legend-chip-list" aria-label="Food Access map methods">
+                  <li><span aria-hidden="true">●</span> Point data</li>
+                  <li><span aria-hidden="true">◒</span> SNAP classification</li>
+                  <li><span aria-hidden="true">▧</span> Demographic overlay</li>
+                </ul>
                 <p><strong>Theme:</strong> Food availability compared with meaningful access.</p>
                 <p><strong>Methods:</strong> ArcGIS Pro, ArcGIS Online, GeoJSON, MapLibre GL JS.</p>
                 <p><strong>Insight:</strong> Food presence does not equal accessibility.</p>
-                <a class="link" href="#food-access">Jump to Food Access section</a>
+                <a class="project-card-cta primary" href="#food-access-map">Open interactive map <span aria-hidden="true">&rarr;</span></a>
               </div>
             </article>
             <article class="project-card">
-              <div class="thumbnail-preview housing-card">Static maps and charts</div>
+              <div class="thumbnail-preview housing-card">
+                <img src="./assets/thumbnails/homelessness-us-thumb.webp" alt="Map preview showing state-level homelessness patterns in the United States." loading="eager" onerror="this.hidden=true">
+                <span>State-level rates and change</span>
+              </div>
               <div class="project-card-body">
-                <p class="meta">United States | Housing</p>
+                <p class="geo-badge"><span aria-hidden="true">⌖</span> United States</p>
+                <p class="meta">Housing</p>
                 <h2>Changing Patterns of Homelessness, 2020-2024</h2>
+                <ul class="legend-chip-list" aria-label="Homelessness map methods">
+                  <li><span aria-hidden="true">▧</span> Choropleth</li>
+                  <li><span aria-hidden="true">÷</span> Rate normalization</li>
+                  <li><span aria-hidden="true">↔</span> Comparison slider</li>
+                </ul>
                 <p><strong>Theme:</strong> State-level homelessness by count, rate, growth, and shelter status.</p>
                 <p><strong>Methods:</strong> rate calculation, temporal change, comparative cartography.</p>
                 <p><strong>Insight:</strong> Homelessness varies not only by scale, but by intensity, change, and structure.</p>
-                <a class="link" href="#homelessness">Jump to Homelessness section</a>
+                <a class="project-card-cta" href="#homelessness">Explore case study <span aria-hidden="true">&rarr;</span></a>
               </div>
             </article>
             <article class="project-card">
-              <div class="thumbnail-preview health-card">County-level disparity maps</div>
+              <div class="thumbnail-preview health-card">
+                <img src="./assets/thumbnails/breast-cancer-mortality-thumb.webp" alt="Map preview showing county-level breast cancer mortality disparity patterns." loading="eager" onerror="this.hidden=true">
+                <span>County-level disparity clusters</span>
+              </div>
               <div class="project-card-body">
-                <p class="meta">United States counties | Public health</p>
+                <p class="geo-badge"><span aria-hidden="true">⌖</span> U.S. Counties</p>
+                <p class="meta">Public health</p>
                 <h2>Racial Disparities in Breast Cancer Mortality</h2>
+                <ul class="legend-chip-list" aria-label="Breast Cancer Mortality map methods">
+                  <li><span aria-hidden="true">▧</span> County choropleth</li>
+                  <li><span aria-hidden="true">∶</span> Mortality ratio</li>
+                  <li><span aria-hidden="true">★</span> Hot spot analysis</li>
+                </ul>
                 <p><strong>Theme:</strong> Spatial structure in county-level Black and White mortality differences.</p>
                 <p><strong>Methods:</strong> rate ratios, dual-data filtering, suppression review, comparative cartography.</p>
                 <p><strong>Insight:</strong> Comparable-county ratios reveal where racial mortality differences can be mapped directly.</p>
-                <a class="link" href="#breast-cancer-mortality">Jump to Breast Cancer Mortality section</a>
+                <a class="project-card-cta" href="#breast-cancer">Explore case study <span aria-hidden="true">&rarr;</span></a>
               </div>
             </article>
           </div>
@@ -87,6 +101,12 @@
           <article>
             <p class="case-kicker">Washington, D.C. | Food access</p>
             <h2 id="food-access-heading">Food Access in Washington, D.C.</h2>
+            <dl class="map-collar" aria-label="Food Access map metadata">
+              <div><dt>Geography</dt><dd>Washington, D.C.</dd></div>
+              <div><dt>Scale</dt><dd>City</dd></div>
+              <div><dt>Data type</dt><dd>Food locations + demographic context</dd></div>
+              <div><dt>Output</dt><dd>Interactive web map</dd></div>
+            </dl>
             <p class="lead">Food availability is not the same as food accessibility.</p>
             <p>This project compares general food locations with SNAP-supported access in Washington, D.C. to reveal gaps between food availability and meaningful food access for low-income communities.</p>
             <div class="callout"><strong>Key insight</strong>Food presence does not equal accessibility.</div>
@@ -101,7 +121,7 @@
                 <button type="button" class="story-view-button" data-food-story-view="access-need-overlap" aria-pressed="false" aria-label="Story view 3: Access and need overlap">3 Access + need overlap</button>
                 <button type="button" class="story-view-button" data-food-story-view="candidate-access-gaps" aria-pressed="true" aria-label="Story view 4: Candidate access gaps">4 Candidate access gaps</button>
               </div>
-              <button type="button" class="map-controls-toggle" data-map-controls-toggle aria-expanded="true" aria-controls="food-access-layer-panel food-access-legend-panel">Hide map controls</button>
+              <button type="button" class="map-controls-toggle" data-map-controls-toggle aria-expanded="true" aria-controls="food-access-layer-panel food-access-legend-panel">Hide Layers and Legend</button>
               <div class="food-access-map-card">
                 <aside class="map-panel map-layer-panel" id="food-access-layer-panel" aria-label="Food access map layer controls">
                   <h4>Layers</h4>
@@ -158,11 +178,20 @@
           </article>
         </div>
       </section>
+      <div class="carto-divider" aria-hidden="true">
+        <span></span><span></span><span></span><span></span>
+      </div>
       <section class="section alt portfolio-case" id="homelessness" aria-labelledby="homelessness-heading">
         <div class="container case-preview">
           <article>
             <p class="case-kicker">United States | Housing | 2020-2024</p>
             <h2 id="homelessness-heading">Changing Patterns of Homelessness in the United States</h2>
+            <dl class="map-collar" aria-label="Homelessness map metadata">
+              <div><dt>Geography</dt><dd>United States</dd></div>
+              <div><dt>Scale</dt><dd>State</dd></div>
+              <div><dt>Data type</dt><dd>Counts, rates, change, unsheltered share</dd></div>
+              <div><dt>Output</dt><dd>Static maps + comparison sliders</dd></div>
+            </dl>
             <p class="lead">Homelessness varies by intensity, growth, and structure across states.</p>
             <p>This project compares state-level homelessness using total count, population-adjusted rate, change from 2020 to 2024, and unsheltered percentage.</p>
             <div class="callout"><strong>Important concept</strong>Raw counts show burden. Rates show intensity.</div>
@@ -171,48 +200,32 @@
             <h3>Visual Analysis</h3>
             <p>The following maps and charts compare homelessness by total count, population-adjusted rate, rate change, and unsheltered share.</p>
             <h4>Total Count vs Homelessness Rate</h4>
-            <div class="image-slider" data-image-slider tabindex="0" aria-label="Compare homelessness total count and rate maps">
-              <div class="slider-track" aria-live="polite">
-                <figure class="slider-slide" aria-hidden="false">
-                  <img src="./assets/maps/homelessness-us/homelessness-total-count-2024.png" alt="Map showing total homeless people by U.S. state in 2024, with the highest totals visible in states such as California, New York, Texas, Florida, and Washington." loading="lazy">
-                  <figcaption>Total Homeless People, 2024</figcaption>
-                </figure>
-                <figure class="slider-slide" aria-hidden="true">
-                  <img src="./assets/maps/homelessness-us/homelessness-rate-2024.png" alt="Map showing homelessness rate per 10,000 people by U.S. state in 2024, with higher rates concentrated in places such as New York, Vermont, Hawaii, California, Oregon, and Alaska." loading="lazy">
-                  <figcaption>Homelessness Rate per 10,000 People, 2024</figcaption>
-                </figure>
-              </div>
-              <div class="slider-controls" aria-label="Homelessness map slider controls">
-                <button class="slider-button" type="button" data-slider-prev aria-label="Show previous homelessness map">Previous</button>
-                <div class="slider-dots" role="tablist" aria-label="Choose homelessness map">
-                  <button class="slider-dot" type="button" data-slider-dot aria-label="Show Total Homeless People, 2024" aria-current="true"></button>
-                  <button class="slider-dot" type="button" data-slider-dot aria-label="Show Homelessness Rate per 10,000 People, 2024" aria-current="false"></button>
+            <div class="comparison-slider" data-comparison-slider style="--position: 50%;" aria-label="Compare homelessness total count and rate maps">
+              <div class="comparison-slider-frame">
+                <img class="comparison-image" src="./assets/maps/homelessness-us/homelessness-rate-2024.png" alt="Map showing homelessness rate per 10,000 people by U.S. state in 2024, with higher rates concentrated in places such as New York, Vermont, Hawaii, California, Oregon, and Alaska." loading="lazy">
+                <div class="comparison-overlay">
+                  <img class="comparison-image" src="./assets/maps/homelessness-us/homelessness-total-count-2024.png" alt="Map showing total homeless people by U.S. state in 2024, with the highest totals visible in states such as California, New York, Texas, Florida, and Washington." loading="lazy">
                 </div>
-                <button class="slider-button" type="button" data-slider-next aria-label="Show next homelessness map">Next</button>
+                <span class="comparison-label comparison-label-left">Total count</span>
+                <span class="comparison-label comparison-label-right">Rate per population</span>
+                <span class="comparison-handle" aria-hidden="true"></span>
               </div>
+              <input class="comparison-range" type="range" min="0" max="100" value="50" aria-label="Adjust comparison between total count and rate per population maps">
             <p class="caption">Use the slider to compare two perspectives. Total counts show where the largest number of people are experiencing homelessness, while rates show where homelessness is most intense relative to population.</p>
             </div>
             <h4>Change in Homelessness Rate</h4>
             <p>Change in homelessness rate can be read in two ways. Absolute change shows how much the rate increased or decreased, while standard deviation change shows which states stand out as unusual compared with the national pattern.</p>
-            <div class="image-slider" data-image-slider tabindex="0" aria-label="Compare absolute and relative change in homelessness rate maps">
-              <div class="slider-track" aria-live="polite">
-                <figure class="slider-slide" aria-hidden="false">
-                  <img src="./assets/maps/homelessness-us/homelessness-rate-difference-2020-2024.png" alt="Map showing the absolute difference in homelessness rate by U.S. state between 2020 and 2024, with stronger increases visible in states such as New York, Vermont, Hawaii, Oregon, Illinois, Colorado, and New Mexico." loading="lazy">
-                  <figcaption>Difference in Homelessness Rate, 2020-2024</figcaption>
-                </figure>
-                <figure class="slider-slide" aria-hidden="true">
-                  <img src="./assets/maps/homelessness-us/homelessness-rate-change-standard-deviation-2020-2024.png" alt="Map showing change in homelessness rate by U.S. state using standard deviation classes, highlighting which states increased or decreased more strongly relative to the national pattern." loading="lazy">
-                  <figcaption>Relative Change in Homelessness Rate, 2020-2024</figcaption>
-                </figure>
-              </div>
-              <div class="slider-controls" aria-label="Homelessness change map slider controls">
-                <button class="slider-button" type="button" data-slider-prev aria-label="Show previous homelessness change map">Previous</button>
-                <div class="slider-dots" role="tablist" aria-label="Choose homelessness change map">
-                  <button class="slider-dot" type="button" data-slider-dot aria-label="Show Difference in Homelessness Rate, 2020-2024" aria-current="true"></button>
-                  <button class="slider-dot" type="button" data-slider-dot aria-label="Show Relative Change in Homelessness Rate, 2020-2024" aria-current="false"></button>
+            <div class="comparison-slider" data-comparison-slider style="--position: 50%;" aria-label="Compare absolute and relative change in homelessness rate maps">
+              <div class="comparison-slider-frame">
+                <img class="comparison-image" src="./assets/maps/homelessness-us/homelessness-rate-change-standard-deviation-2020-2024.png" alt="Map showing change in homelessness rate by U.S. state using standard deviation classes, highlighting which states increased or decreased more strongly relative to the national pattern." loading="lazy">
+                <div class="comparison-overlay">
+                  <img class="comparison-image" src="./assets/maps/homelessness-us/homelessness-rate-difference-2020-2024.png" alt="Map showing the absolute difference in homelessness rate by U.S. state between 2020 and 2024, with stronger increases visible in states such as New York, Vermont, Hawaii, Oregon, Illinois, Colorado, and New Mexico." loading="lazy">
                 </div>
-                <button class="slider-button" type="button" data-slider-next aria-label="Show next homelessness change map">Next</button>
+                <span class="comparison-label comparison-label-left">Absolute change</span>
+                <span class="comparison-label comparison-label-right">Relative change</span>
+                <span class="comparison-handle" aria-hidden="true"></span>
               </div>
+              <input class="comparison-range" type="range" min="0" max="100" value="50" aria-label="Adjust comparison between absolute and relative change maps">
             <p class="caption">Use the slider to compare two ways of reading change. Absolute change shows where homelessness rates increased or decreased the most, while standard deviation highlights which states stand out compared with the national pattern.</p>
             </div>
             <h3>Structural Differences: Sheltered vs. Unsheltered Homelessness</h3>
@@ -247,11 +260,21 @@
           </article>
         </div>
       </section>
+      <div class="carto-divider" aria-hidden="true">
+        <span></span><span></span><span></span><span></span>
+      </div>
       <section class="section portfolio-case" id="breast-cancer-mortality" aria-labelledby="breast-cancer-heading">
         <div class="container case-preview">
           <article>
+            <span class="anchor-target" id="breast-cancer" aria-hidden="true"></span>
             <p class="case-kicker">United States counties | Public health</p>
             <h2 id="breast-cancer-heading">Racial Disparities in Breast Cancer Mortality in the U.S.</h2>
+            <dl class="map-collar" aria-label="Breast Cancer Mortality map metadata">
+              <div><dt>Geography</dt><dd>U.S. counties</dd></div>
+              <div><dt>Scale</dt><dd>County</dd></div>
+              <div><dt>Data type</dt><dd>Mortality rates, ratios, hot spot analysis</dd></div>
+              <div><dt>Output</dt><dd>Static disparity maps</dd></div>
+            </dl>
             <p class="lead">Racial disparities in breast cancer mortality are spatially structured, not random.</p>
             <p>This project compares Black and White breast cancer mortality rates in counties where both values are available and maps where direct comparison is possible.</p>
             <div class="callout"><strong>Key insight</strong>Comparable-county ratios reveal where Black-to-White mortality differences can be evaluated directly, while suppression limits complete national comparison.</div>
@@ -305,19 +328,23 @@
           </article>
         </div>
       </section>
-      <section class="section closing-cta" aria-labelledby="gis-contact-heading">
-        <div class="container content-panel">
-          <h2 id="gis-contact-heading">Interested in GIS, spatial analysis, or public-interest mapping work?</h2>
-          <p>I’m looking for junior GIS analyst opportunities where I can apply spatial analysis, data cleaning, cartography, and web mapping to real-world planning, public health, housing, sustainability, and community problems.</p>
-          <a class="button" href="./contact/">Contact</a>
-        </div>
-      </section>
     </main>
     <footer class="site-footer">
       <div class="container footer-grid">
         <p>&copy; 2026 Alok Revi. GIS portfolio.</p>
         <div class="footer-links">
-          <a href="./contact/">Contact</a>
+          <a class="social-link" href="https://www.linkedin.com/in/aloknr/" target="_blank" rel="noopener noreferrer" aria-label="Visit Alok Revi on LinkedIn">
+            <svg aria-hidden="true" viewBox="0 0 24 24" width="18" height="18" focusable="false">
+              <path fill="currentColor" d="M20.45 20.45h-3.56v-5.58c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.95v5.67H9.34V8.98h3.42v1.57h.05c.48-.9 1.64-1.85 3.37-1.85 3.61 0 4.27 2.37 4.27 5.46v6.29ZM5.32 7.41a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12Zm1.78 13.04H3.54V8.98H7.1v11.47ZM22.23 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.46c.98 0 1.77-.77 1.77-1.72V1.72C24 .77 23.21 0 22.23 0Z"/>
+            </svg>
+            <span>LinkedIn</span>
+          </a>
+          <a class="social-link" href="https://github.com/AlokRevi" target="_blank" rel="noopener noreferrer" aria-label="Visit Alok Revi on GitHub">
+            <svg aria-hidden="true" viewBox="0 0 24 24" width="18" height="18" focusable="false">
+              <path fill="currentColor" d="M12 0C5.37 0 0 5.5 0 12.28c0 5.43 3.44 10.03 8.2 11.66.6.11.82-.27.82-.59 0-.29-.01-1.06-.02-2.08-3.34.74-4.04-1.65-4.04-1.65-.55-1.42-1.33-1.8-1.33-1.8-1.09-.76.08-.75.08-.75 1.2.09 1.84 1.27 1.84 1.27 1.07 1.88 2.81 1.34 3.5 1.02.11-.79.42-1.34.76-1.65-2.66-.31-5.46-1.36-5.46-6.07 0-1.34.47-2.44 1.24-3.3-.12-.31-.54-1.56.12-3.25 0 0 1.01-.33 3.3 1.26A11.2 11.2 0 0 1 12 5.93c1.02.01 2.04.14 3 .42 2.29-1.59 3.3-1.26 3.3-1.26.66 1.69.24 2.94.12 3.25.77.86 1.24 1.96 1.24 3.3 0 4.72-2.8 5.75-5.48 6.06.43.38.82 1.13.82 2.28 0 1.65-.02 2.98-.02 3.38 0 .33.22.71.83.59A12.26 12.26 0 0 0 24 12.28C24 5.5 18.63 0 12 0Z"/>
+            </svg>
+            <span>GitHub</span>
+          </a>
         </div>
       </div>
     </footer>

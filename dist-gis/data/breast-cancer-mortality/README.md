@@ -1,11 +1,14 @@
 # Breast Cancer Mortality Project Data Notes
 
-This folder documents source data notes, cleaned tables, or export metadata for the Breast Cancer Mortality case study.
+This folder is reserved for source data notes, cleaned tables, or export metadata for the Breast Cancer Mortality case study.
 
-Current visual export paths:
+V1 uses styled visual placeholders instead of final exported map images. Replace those placeholders with final static map or chart exports when available.
 
-- `assets/maps/breast-cancer-mortality/breast-cancer-all-races-mortality-2019-2023.png`
-- `assets/maps/breast-cancer-mortality/breast-cancer-data-coverage-2019-2023.png`
-- `assets/maps/breast-cancer-mortality/breast-cancer-mortality-ratio-2019-2023.png`
+Expected visual export paths:
 
-Document data sources, suppression rules, ratio calculations, and spatial clustering methods here as the analysis is maintained.
+- `assets/maps/breast-cancer-mortality/breast-cancer-data-coverage.png`
+- `assets/maps/breast-cancer-mortality/breast-cancer-mortality-ratio.png`
+- `assets/maps/breast-cancer-mortality/breast-cancer-disparity-map.png`
+- `assets/maps/breast-cancer-mortality/breast-cancer-hotspot-analysis.png`
+
+Document final data sources, suppression rules, ratio calculations, and hot spot analysis parameters here before publication.

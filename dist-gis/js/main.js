@@ -23,9 +23,46 @@ document.addEventListener("DOMContentLoaded", () => {
     mapControlsToggle.addEventListener("click", () => {
       const isCollapsed = mapCard.classList.toggle("controls-collapsed");
       mapControlsToggle.setAttribute("aria-expanded", String(!isCollapsed));
-      mapControlsToggle.textContent = isCollapsed ? "Show map controls" : "Hide map controls";
+      mapControlsToggle.textContent = isCollapsed ? "Show Layers and Legend" : "Hide Layers and Legend";
     });
   }
+
+  document.querySelectorAll("[data-comparison-slider]").forEach((slider) => {
+    const range = slider.querySelector(".comparison-range");
+    const frame = slider.querySelector(".comparison-slider-frame");
+
+    if (!(range instanceof HTMLInputElement)) {
+      return;
+    }
+
+    const updateComparison = () => {
+      slider.style.setProperty("--position", `${range.value}%`);
+    };
+
+    range.addEventListener("input", updateComparison);
+
+    if (frame instanceof HTMLElement) {
+      const updateFromPointer = (event) => {
+        const rect = frame.getBoundingClientRect();
+        const nextValue = Math.min(100, Math.max(0, ((event.clientX - rect.left) / rect.width) * 100));
+        range.value = String(Math.round(nextValue));
+        updateComparison();
+      };
+
+      frame.addEventListener("pointerdown", (event) => {
+        frame.setPointerCapture(event.pointerId);
+        updateFromPointer(event);
+      });
+
+      frame.addEventListener("pointermove", (event) => {
+        if (frame.hasPointerCapture(event.pointerId)) {
+          updateFromPointer(event);
+        }
+      });
+    }
+
+    updateComparison();
+  });
 
   document.querySelectorAll(".image-slider").forEach((slider) => {
     const slides = Array.from(slider.querySelectorAll(".slider-slide"));

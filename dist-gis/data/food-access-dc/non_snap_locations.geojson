@@ -1,6 +1,6 @@
 {
   "type": "FeatureCollection",
-  "name": "non_snap_locations_sample",
+  "name": "non_snap_locations_placeholder",
   "features": [
     {
       "type": "Feature",
@@ -46,4 +46,3 @@
     }
   ]
 }
-
