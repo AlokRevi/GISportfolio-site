@@ -3,17 +3,21 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>GIS Portfolio | Alok Revi</title>
+    <title>Alok GIS</title>
     <meta name="description" content="GIS portfolio projects by Alok Revi focused on inequality, access, housing, public health, and public-interest decision-making.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="./assets/icons/north-arrow-favicon.svg" type="image/svg+xml">
     <link rel="stylesheet" href="https://unpkg.com/maplibre-gl@5.8.0/dist/maplibre-gl.css">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/maps.css">
   </head>
-  <body>
+  <body id="top">
     <a class="skip-link" href="#main">Skip to content</a>
     <header class="site-header">
       <div class="container nav-wrap">
-        <a class="site-brand" href="./">Alok Revi</a>
+        <a class="site-brand home-link" href="#top" aria-label="Return to top of GIS portfolio"><span class="north-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" focusable="false"><path d="M12 3 5.8 20 12 16.4 18.2 20 12 3Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M12 7.8v8.6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span><span>Home</span></a>
         <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" data-nav-toggle>Menu</button>
         <nav class="site-nav" id="site-nav" aria-label="Primary navigation" data-site-nav>
           <a href="./" aria-current="page">GIS Portfolio</a>
@@ -21,10 +25,16 @@
         </nav>
       </div>
     </header>
+    <nav class="section-progress-nav" aria-label="GIS page sections">
+      <a href="#gis-overview" class="section-progress-link is-active" data-section-nav-link="gis-overview" aria-label="Jump to GIS portfolio overview"><span aria-hidden="true">⌖</span></a>
+      <a href="#food-access" class="section-progress-link" data-section-nav-link="food-access" aria-label="Jump to Food Access map"><span aria-hidden="true">●</span></a>
+      <a href="#homelessness" class="section-progress-link" data-section-nav-link="homelessness" aria-label="Jump to Homelessness case study"><span aria-hidden="true">▧</span></a>
+      <a href="#breast-cancer" class="section-progress-link" data-section-nav-link="breast-cancer" aria-label="Jump to Breast Cancer Mortality case study"><span aria-hidden="true">◌</span></a>
+      <a href="#connect" class="section-progress-link" data-section-nav-link="connect" aria-label="Jump to connect section"><span aria-hidden="true">@</span></a>
+    </nav>
     <main id="main">
-      <section class="page-hero gis-hero">
+      <section class="page-hero gis-hero" id="gis-overview">
         <div class="container">
-          <p class="eyebrow">Selected GIS Work</p>
           <h1>Alok Revi</h1>
           <p class="hero-subtitle">GIS Analyst | Spatial Analysis | Web Mapping</p>
           <p class="lead">I use GIS for public-interest spatial analysis that makes patterns in access, housing, and health easier to see and act on.</p>
@@ -32,6 +42,7 @@
       </section>
       <section class="section gis-case-studies" id="case-studies" aria-label="GIS case studies">
         <div class="container">
+          <p class="eyebrow case-studies-label">Selected GIS Work</p>
           <div class="grid three">
             <article class="project-card">
               <div class="thumbnail-preview food-card">
@@ -110,14 +121,14 @@
                 <button type="button" class="story-view-button" data-food-story-view="access-points" aria-pressed="false" aria-label="Story view 1: Food access points">1 Food access points</button>
                 <button type="button" class="story-view-button" data-food-story-view="poverty-context" aria-pressed="false" aria-label="Story view 2: Poverty context">2 Poverty context</button>
                 <button type="button" class="story-view-button" data-food-story-view="access-need-overlap" aria-pressed="false" aria-label="Story view 3: Access and need overlap">3 Access + need overlap</button>
-                <button type="button" class="story-view-button" data-food-story-view="candidate-access-gaps" aria-pressed="true" aria-label="Story view 4: Candidate access gaps">4 Candidate access gaps</button>
+                <button type="button" class="story-view-button" data-food-story-view="candidate-access-gaps" aria-pressed="false" aria-label="Story view 4: Candidate access gaps">4 Candidate access gaps</button>
               </div>
               <button type="button" class="map-controls-toggle" data-map-controls-toggle aria-expanded="true" aria-controls="food-access-layer-panel food-access-legend-panel">Hide Layers and Legend</button>
               <div class="food-access-map-card">
                 <aside class="map-panel map-layer-panel" id="food-access-layer-panel" aria-label="Food access map layer controls">
                   <h4>Layers</h4>
                   <label><input type="checkbox" checked data-food-layer="candidate-access-gaps-fill,candidate-access-gaps-outline" aria-label="Toggle candidate access gaps layer"> Candidate access gaps</label>
-                  <label><input type="checkbox" data-food-layer="poverty-context-fill,poverty-context-outline" aria-label="Toggle poverty context layer"> Poverty context</label>
+                  <label><input type="checkbox" checked data-food-layer="poverty-context-fill,poverty-context-outline" aria-label="Toggle poverty context layer"> Poverty context</label>
                   <label><input type="checkbox" checked data-food-layer="snap-retailers-circle" aria-label="Toggle SNAP retailers layer"> SNAP retailers</label>
                   <label><input type="checkbox" data-food-layer="farmers-markets-circle" aria-label="Toggle farmers markets layer"> Farmers markets</label>
                   <label><input type="checkbox" checked data-food-layer="dc-boundary-line" aria-label="Toggle D.C. boundary layer"> D.C. boundary</label>
@@ -342,15 +353,14 @@
           </article>
         </div>
       </section>
-      <section class="section closing-cta" aria-labelledby="gis-connect-heading">
+      <section class="section closing-cta" id="connect" aria-labelledby="gis-connect-heading">
         <div class="container">
           <div class="content-panel">
-            <p class="eyebrow">Next Step</p>
             <h2 id="gis-connect-heading">Let's connect</h2>
             <p>I'm looking for GIS analyst opportunities where spatial analysis, data cleaning, cartography, and public-interest decision-making matter.</p>
-            <!-- TODO: Add email and resume links when final public URLs are available. -->
             <div class="cta-actions">
-              <a class="button" href="https://www.linkedin.com/in/aloknr/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+              <a class="button" href="mailto:aloksdev1@gmail.com">Email</a>
+              <a class="button secondary" href="https://www.linkedin.com/in/aloknr/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
               <a class="button secondary" href="https://github.com/AlokRevi" target="_blank" rel="noopener noreferrer">GitHub</a>
             </div>
           </div>

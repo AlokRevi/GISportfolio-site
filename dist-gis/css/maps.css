@@ -4,6 +4,7 @@
   margin: 1rem 0 1.5rem;
 }
 
+/* Food Access story buttons and map controls */
 #food-access-map {
   scroll-margin-top: 92px;
 }
@@ -103,6 +104,7 @@
   display: none;
 }
 
+/* Floating layer and legend panels */
 .map-panel h4 {
   margin: 0 0 0.65rem;
 }
@@ -230,6 +232,7 @@
   margin: 0.15rem 0;
 }
 
+/* Keep map controls below the map on smaller touch screens. */
 @media (max-width: 800px) {
   .story-view-controls {
     grid-template-columns: repeat(2, minmax(0, 1fr));
