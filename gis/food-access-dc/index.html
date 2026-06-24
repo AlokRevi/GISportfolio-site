@@ -3,8 +3,12 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Food Access in Washington, D.C. | Alok Revi GIS Portfolio</title>
+    <title>Alok GIS</title>
     <meta name="description" content="Food Access in Washington, D.C. GIS case study comparing food locations with SNAP-supported access using MapLibre and GeoJSON.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="/assets/icons/north-arrow-favicon.svg" type="image/svg+xml">
     <link rel="stylesheet" href="https://unpkg.com/maplibre-gl@5.6.0/dist/maplibre-gl.css">
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/maps.css">
@@ -13,7 +17,7 @@
     <a class="skip-link" href="#main">Skip to content</a>
     <header class="site-header">
       <div class="container nav-wrap">
-        <a class="site-brand" href="/gis/">Alok Revi</a>
+        <a class="site-brand home-link" href="/gis/#top" aria-label="Return to top of GIS portfolio"><span class="north-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" focusable="false"><path d="M12 3 5.8 20 12 16.4 18.2 20 12 3Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M12 7.8v8.6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span><span>Home</span></a>
         <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" data-nav-toggle>Menu</button>
         <nav class="site-nav" id="site-nav" aria-label="Primary navigation" data-site-nav>
           <a href="/gis/" aria-current="page">GIS Portfolio</a>
@@ -47,7 +51,7 @@
                   <p>Toggle layers to compare general food presence with SNAP-supported access and an optional demographic context area.</p>
                 </div>
                 <div class="food-map-layout">
-                  <div id="food-access-map" role="region" aria-label="Interactive map of food access locations in Washington D.C."></div>
+                  <div id="food-access-map" data-food-access-data-path="/data/food-access-dc/" role="region" aria-label="Interactive map of food access locations in Washington D.C."></div>
                   <aside class="map-sidebar" aria-label="Map layers and legend">
                     <h3>Layers</h3>
                     <div class="layer-controls">

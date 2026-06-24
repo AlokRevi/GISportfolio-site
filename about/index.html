@@ -3,15 +3,19 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>About | Alok Revi GIS Portfolio</title>
+    <title>Alok GIS</title>
     <meta name="description" content="About Alok Revi, a junior GIS analyst focused on AI-aware spatial workflows, web mapping, data QA, environmental planning, and community-focused analysis.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="/assets/icons/north-arrow-favicon.svg" type="image/svg+xml">
     <link rel="stylesheet" href="/css/style.css">
   </head>
   <body class="about-page">
     <a class="skip-link" href="#main">Skip to content</a>
     <header class="site-header">
       <div class="container nav-wrap">
-        <a class="site-brand" href="/gis/">Alok Revi</a>
+        <a class="site-brand home-link" href="/gis/#top" aria-label="Return to top of GIS portfolio"><span class="north-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" focusable="false"><path d="M12 3 5.8 20 12 16.4 18.2 20 12 3Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M12 7.8v8.6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span><span>Home</span></a>
         <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" data-nav-toggle>Menu</button>
         <nav class="site-nav" id="site-nav" aria-label="Primary navigation" data-site-nav>
           <a href="/gis/">GIS Portfolio</a>
@@ -29,7 +33,7 @@
           </div>
           <figure class="profile-photo-frame">
             <div class="profile-photo-inner">
-              <span class="profile-photo-placeholder">Photo coming soon</span>
+              <span class="profile-photo-placeholder" aria-hidden="true">AR</span>
               <img src="/assets/images/alok-profile.jpg" alt="Portrait photo of Alok Revi" loading="eager" onerror="this.hidden=true">
             </div>
           </figure>
@@ -40,21 +44,32 @@
           <div class="about-copy">
             <h2>Professional Focus</h2>
             <p>I am building a GIS practice around environmental planning, public-interest data, and community-focused spatial analysis. My work focuses on problems where location, access, risk, and equity matter: urban heat, cooling access, tree planting, food access, native plant planning, public health, and community services.</p>
-            <p>In an AI-shaped workplace, I focus on the skills that still need strong human judgement: asking better spatial questions, checking data quality, documenting assumptions, validating outputs, and translating analysis into maps that people can actually use. My background in project management, software development, production workflows, and sustainability work helps me organize data, build workflows, communicate trade-offs, and move projects from unclear problem to usable output.</p>
-            <p>I am currently targeting junior GIS Analyst / GIS Technician roles connected to climate resilience, green infrastructure, urban forestry, conservation, municipal services, public health, and community planning.</p>
+            <p>I use AI as a support tool for research, workflow planning, coding help, and documentation, while treating validation, source checking, assumptions, and spatial judgement as the core professional work. I am targeting junior GIS Analyst / GIS Technician roles where data QA, documentation, web mapping, and project coordination matter.</p>
           </div>
           <div class="content-panel strengths-panel">
             <h2>Working Strengths</h2>
-            <ul class="strengths-list">
-              <li>Preparing, cleaning, and validating spatial datasets before analysis.</li>
-              <li>Building GIS and web mapping workflows using ArcGIS Pro, QGIS, Python, JavaScript, GitHub, and MapLibre.</li>
-              <li>Using AI as a support tool for research, workflow planning, coding help, and documentation — while checking outputs against data and project context.</li>
-              <li>Explaining assumptions, limitations, methods, and next steps clearly.</li>
-              <li>Translating complex spatial analysis into readable maps and stakeholder-friendly summaries.</li>
-              <li>Coordinating timelines, documentation, communication, and follow-through across projects.</li>
-            </ul>
-            <a class="button" href="/gis/">View GIS Projects</a>
+            <div class="strengths-groups">
+              <section class="strength-row">
+                <h3>GIS + Data</h3>
+                <p>Clean spatial data, raster/vector workflows, accessibility maps, demographic overlays, and environmental risk maps.</p>
+              </section>
+              <section class="strength-row">
+                <h3>Web + Developer Skills</h3>
+                <p>Python, JavaScript, SQL, GitHub, MapLibre, HTML, and CSS for GIS workflows and web mapping.</p>
+              </section>
+              <section class="strength-row">
+                <h3>Professional Practice</h3>
+                <p>Clear assumptions, methods, limitations, QA steps, timelines, communication, and follow-through.</p>
+              </section>
+              <section class="strength-row">
+                <h3>AI-Aware Workflow</h3>
+                <p>AI-supported research, code planning, documentation, and idea testing with source-data validation.</p>
+              </section>
+            </div>
           </div>
+        </div>
+        <div class="container about-projects-cta">
+          <a class="button" href="/gis/">View GIS Projects</a>
         </div>
       </section>
       <section class="section alt about-capabilities-section" aria-labelledby="what-i-bring-heading">
@@ -68,11 +83,11 @@
           <div class="about-card-grid">
             <article class="content-panel">
               <h3>Spatial Analysis + Environmental Data</h3>
-              <p>Raster/vector analysis, suitability analysis, accessibility mapping, demographic analysis, LST workflows, land cover analysis, and environmental risk mapping.</p>
+              <p>Raster/vector, suitability, accessibility, LST, land cover, and environmental risk mapping.</p>
             </article>
             <article class="content-panel">
               <h3>AI-Aware Workflow Thinking</h3>
-              <p>Comfort using AI tools to speed up research, code planning, documentation, and idea testing — with a strong focus on validation, source checking, and human review.</p>
+              <p>AI-assisted research, code planning, documentation, and QA support with human validation.</p>
             </article>
             <article class="content-panel">
               <h3>Web Mapping + Developer Skills</h3>
@@ -80,12 +95,15 @@
             </article>
             <article class="content-panel">
               <h3>Project Coordination</h3>
-              <p>Experience managing workflows, stakeholders, documentation, deadlines, QA processes, and cross-functional communication.</p>
+              <p>Workflow planning, stakeholder communication, documentation, deadlines, QA, and follow-through.</p>
             </article>
           </div>
           <div class="connect-strip" id="connect" aria-labelledby="connect-heading">
-            <h3 id="connect-heading">Find me online</h3>
+            <h3 id="connect-heading">Contact</h3>
             <div class="social-links">
+            <a class="social-link" href="mailto:aloksdev1@gmail.com" aria-label="Email Alok Revi">
+              <span>Email</span>
+            </a>
             <a class="social-link" href="https://www.linkedin.com/in/aloknr/" target="_blank" rel="noopener noreferrer" aria-label="Visit Alok Revi on LinkedIn">
               <svg aria-hidden="true" viewBox="0 0 24 24" width="20" height="20" focusable="false">
                 <path fill="currentColor" d="M20.45 20.45h-3.56v-5.58c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.95v5.67H9.34V8.98h3.42v1.57h.05c.48-.9 1.64-1.85 3.37-1.85 3.61 0 4.27 2.37 4.27 5.46v6.29ZM5.32 7.41a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12Zm1.78 13.04H3.54V8.98H7.1v11.47ZM22.23 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.46c.98 0 1.77-.77 1.77-1.72V1.72C24 .77 23.21 0 22.23 0Z"/>

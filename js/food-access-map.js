@@ -16,6 +16,7 @@
   let fallbackStyleApplied = false;
   let foodAccessLayersAdded = false;
 
+  // Basemap first; project layers are added after the style has loaded.
   const map = new maplibregl.Map({
     container: "food-access-map",
     style: positronStyle,
@@ -45,6 +46,9 @@
     ["access_gap_category", "Access gap category"]
   ];
   const dataPath = mapContainer.dataset.foodAccessDataPath || "/data/food-access-dc/";
+
+  // Layer groups keep the checkboxes and story buttons in sync when a logical layer
+  // is represented by both fill and outline MapLibre layers.
   const layerGroups = {
     gaps: "candidate-access-gaps-fill,candidate-access-gaps-outline",
     poverty: "poverty-context-fill,poverty-context-outline",
@@ -52,6 +56,8 @@
     markets: "farmers-markets-circle",
     boundary: "dc-boundary-line"
   };
+  // Story views are optional presets. The initial page load intentionally uses a
+  // separate default state so no story button appears selected by default.
   const storyViews = {
     "access-points": {
       gaps: false,
@@ -82,7 +88,16 @@
       boundary: true
     }
   };
+  const initialLayerState = {
+    gaps: true,
+    poverty: true,
+    snap: true,
+    markets: false,
+    boundary: true
+  };
 
+  // Popup content is assembled from selected fields only, with HTML escaping for
+  // values coming from GeoJSON properties.
   const escapeHtml = (value) => String(value)
     .replaceAll("&", "&amp;")
     .replaceAll("<", "&lt;")
@@ -217,6 +232,7 @@
 
   window.toggleFoodAccessLayer = toggleFoodAccessLayer;
 
+  // Keep UI controls aligned when a story preset changes layer visibility.
   const setMatchingControls = (layerId, checked) => {
     document.querySelectorAll("[data-food-layer]").forEach((control) => {
       if (control.dataset.foodLayer === layerId) {
@@ -247,6 +263,16 @@
     setStoryButtonState(viewName);
   };
 
+  const applyInitialLayerState = () => {
+    Object.entries(initialLayerState).forEach(([group, checked]) => {
+      const layerId = layerGroups[group];
+      toggleFoodAccessLayer(layerId, checked);
+      setMatchingControls(layerId, checked);
+    });
+
+    setStoryButtonState("");
+  };
+
   const addFoodAccessLayers = () => {
     if (foodAccessLayersAdded || map.getSource("dc-boundary")) {
       return;
@@ -254,6 +280,7 @@
 
     foodAccessLayersAdded = true;
 
+    // Data files are small, web-ready GeoJSON exports stored with the static site.
     map.addSource("dc-boundary", {
       type: "geojson",
       data: `${dataPath}dc_boundary.geojson`
@@ -284,7 +311,7 @@
       type: "fill",
       source: "poverty-context",
       layout: {
-        visibility: "none"
+        visibility: "visible"
       },
       paint: {
         "fill-color": [
@@ -311,7 +338,7 @@
       type: "line",
       source: "poverty-context",
       layout: {
-        visibility: "none"
+        visibility: "visible"
       },
       paint: {
         "line-color": "#ffffff",
@@ -418,6 +445,7 @@
     bindDemographicPopup("poverty-context-fill");
     bindGapPopup("candidate-access-gaps-fill");
 
+    // Checkboxes and story buttons only become active after all project layers exist.
     document.querySelectorAll("[data-food-layer]").forEach((control) => {
       control.addEventListener("change", () => {
         toggleFoodAccessLayer(control.dataset.foodLayer, control.checked);
@@ -431,7 +459,7 @@
       });
     });
 
-    applyStoryView("candidate-access-gaps");
+    applyInitialLayerState();
 
     console.info("[Food Access Map] Layers loaded.");
   };

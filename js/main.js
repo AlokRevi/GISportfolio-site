@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
+  // Mobile navigation is shared by all static pages.
   const toggle = document.querySelector("[data-nav-toggle]");
   const nav = document.querySelector("[data-site-nav]");
 
@@ -19,6 +20,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const mapControlsToggle = document.querySelector("[data-map-controls-toggle]");
   const mapCard = document.querySelector(".food-access-map-card");
 
+  // Let map readers focus on the map by hiding the floating layer and legend panels.
   if (mapControlsToggle && mapCard) {
     mapControlsToggle.addEventListener("click", () => {
       const isCollapsed = mapCard.classList.toggle("controls-collapsed");
@@ -27,6 +29,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
+  // Static map comparisons use a range input for keyboard access and pointer dragging for mouse/touch.
   document.querySelectorAll("[data-comparison-slider]").forEach((slider) => {
     const range = slider.querySelector(".comparison-range");
     const frame = slider.querySelector(".comparison-slider-frame");
@@ -64,6 +67,7 @@ document.addEventListener("DOMContentLoaded", () => {
     updateComparison();
   });
 
+  // Older project pages still use this simple image carousel.
   document.querySelectorAll(".image-slider").forEach((slider) => {
     const slides = Array.from(slider.querySelectorAll(".slider-slide"));
     const dots = Array.from(slider.querySelectorAll("[data-slider-dot]"));
@@ -127,4 +131,41 @@ document.addEventListener("DOMContentLoaded", () => {
 
     showSlide(activeIndex);
   });
+
+  // The left-side GIS page guide works as normal anchor links without JavaScript.
+  const sectionNavLinks = Array.from(document.querySelectorAll("[data-section-nav-link]"));
+
+  if (sectionNavLinks.length && "IntersectionObserver" in window) {
+    const sectionMap = new Map();
+
+    sectionNavLinks.forEach((link) => {
+      const targetId = link.getAttribute("href")?.replace("#", "");
+      const target = targetId ? document.getElementById(targetId) : null;
+
+      if (target) {
+        sectionMap.set(targetId, { link, target });
+      }
+    });
+
+    const setActiveSection = (sectionId) => {
+      sectionNavLinks.forEach((link) => {
+        link.classList.toggle("is-active", link.dataset.sectionNavLink === sectionId);
+      });
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      const visibleEntry = entries
+        .filter((entry) => entry.isIntersecting)
+        .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+
+      if (visibleEntry) {
+        setActiveSection(visibleEntry.target.id);
+      }
+    }, {
+      rootMargin: "-35% 0px -50% 0px",
+      threshold: [0.1, 0.35, 0.6]
+    });
+
+    sectionMap.forEach(({ target }) => observer.observe(target));
+  }
 });
