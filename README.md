@@ -1,146 +1,103 @@
-# Alok Revi GIS Portfolio
+# Alok GIS Portfolio
+
+Static GIS portfolio site for Alok Revi. The main public experience is the single-scroll `/gis/` page, with a compact root redirect and a concise About page for employers.
 
 ## Purpose
 
-This is Version 1 of a static GIS portfolio website for AlokRevi.com. The site presents spatial analysis work for GIS hiring managers with clear research questions, methods, visuals, limitations, and next steps.
-
-## V1 Scope
-
-- Homepage with featured GIS projects.
-- GIS portfolio hub.
-- Three GIS case study pages.
-- One MapLibre GL JS interactive map for Food Access in Washington, D.C.
-- Structured visual sections for Homelessness and Breast Cancer Mortality exports.
-- GeoJSON files for Food Access map layers.
-- Static-first implementation with no build process.
+The site presents junior GIS analyst work for hiring managers and recruiters. Projects emphasize spatial analysis, data QA, cartography, limitations, and decision value without requiring a backend or build process.
 
 ## Tech Stack
 
-- Plain HTML
-- Plain CSS
-- Plain JavaScript
-- MapLibre GL JS via CDN on the Food Access page
-- GeoJSON map data
-- Static map/chart placeholders
+- Plain HTML, CSS, and JavaScript
+- MapLibre GL JS via CDN for the Food Access interactive map
+- Static GeoJSON data
+- Static map, chart, thumbnail, and icon assets
 
-No framework, build tool, backend, database, CMS, or login is included.
+No framework, package manager, build tool, backend, database, CMS, or login is required.
 
-## Folder Structure
+## Source Structure
 
 ```text
-gis-portfolio/
-├── index.html
-├── about/
-│   └── index.html
-├── contact/
-│   └── index.html
-├── gis/
-│   ├── index.html
-│   ├── food-access-dc/
-│   │   └── index.html
-│   ├── homelessness-us/
-│   │   └── index.html
-│   └── breast-cancer-mortality/
-│       └── index.html
-├── data/
-│   ├── food-access-dc/
-│   │   ├── snap_locations.geojson
-│   │   ├── non_snap_locations.geojson
-│   │   └── demographic_context.geojson
-│   ├── homelessness-us/
-│   │   └── README.md
-│   └── breast-cancer-mortality/
-│       └── README.md
-├── assets/
-│   ├── images/
-│   ├── charts/
-│   ├── maps/
-│   │   ├── homelessness-us/
-│   │   └── breast-cancer-mortality/
-│   └── thumbnails/
-├── css/
-│   ├── style.css
-│   └── maps.css
-├── js/
-│   ├── main.js
-│   ├── food-access-map.js
-│   └── layer-controls.js
-└── README.md
+.
+├── index.html                  # Root redirect/fallback landing page
+├── about/                      # Employer-focused About page
+├── contact/                    # Tracked legacy/direct contact page, not in nav
+├── gis/                        # Source GIS pages; gis/index.html is the main portfolio
+├── css/                        # Shared site styles and map-specific styles
+├── js/                         # Shared UI JS and Food Access MapLibre setup
+├── assets/                     # Icons, profile image, thumbnails, static maps, charts
+├── data/                       # Food Access GeoJSON and project data notes
+├── scripts/                    # Local GIS processing/export scripts
+└── dist-gis/                   # Tracked deploy-ready copy for /gis/ hosting
 ```
 
-## How To Run Locally
+## Deploy Folder
 
-From the project root, run:
+`dist-gis/` is the tracked deploy-ready folder. It preserves relative paths for deployment as a `/gis/` subfolder, such as `https://alokrevi.com/gis/`.
+
+Do not upload `deploy-gisportfolio-site/`; it is an ignored duplicate/local export folder.
+
+## Run Locally
+
+From the project root:
 
 ```bash
-python -m http.server 5500
+python -m http.server 8000
 ```
 
-Then open:
+Open:
 
 ```text
-http://localhost:5500
+http://localhost:8000/
 ```
 
-A local server is recommended because loading GeoJSON with `fetch()` from `file://` may fail in the browser.
+A local server is required for browser `fetch()` calls to GeoJSON files.
 
-## Replacing Placeholder Images
+## Pre-Deployment Checks
 
-The Homelessness case study expects final exports at:
+Run:
 
-- `assets/maps/homelessness-us/homelessness-rate-2024.png`
-- `assets/maps/homelessness-us/homelessness-count-vs-rate.png`
-- `assets/maps/homelessness-us/homelessness-change-2020-2024.png`
-- `assets/maps/homelessness-us/homelessness-unsheltered-2024.png`
+```bash
+node --check js/main.js
+node --check js/food-access-map.js
+git diff --check
+```
 
-The Breast Cancer Mortality case study expects final exports at:
+Then smoke test these paths through the local server:
 
-- `assets/maps/breast-cancer-mortality/breast-cancer-data-coverage.png`
-- `assets/maps/breast-cancer-mortality/breast-cancer-mortality-ratio.png`
-- `assets/maps/breast-cancer-mortality/breast-cancer-disparity-map.png`
-- `assets/maps/breast-cancer-mortality/breast-cancer-hotspot-analysis.png`
+- `/`
+- `/gis/`
+- `/about/`
+- `/css/style.css`
+- `/css/maps.css`
+- `/js/main.js`
+- `/js/food-access-map.js`
+- `/assets/icons/north-arrow-favicon.svg`
+- key thumbnails under `/assets/thumbnails/`
+- Food Access GeoJSON files under `/data/food-access-dc/`
 
-V1 uses styled placeholder blocks so the site does not show broken images before final exports are ready. When final images are available, replace each placeholder block in the relevant HTML page with a semantic `<figure>` containing an `<img>` and `<figcaption>`.
+## Updating Deploy Output
 
-## Replacing Placeholder GeoJSON
+When source files change, sync the equivalent files into `dist-gis/` and keep deploy-relative paths intact. Examples:
 
-The Food Access map uses web-ready GeoJSON files:
+- Source `/css/style.css` -> deploy `dist-gis/css/style.css`
+- Source `/js/main.js` -> deploy `dist-gis/js/main.js`
+- Source `/assets/...` -> deploy `dist-gis/assets/...`
+- Source `/about/index.html` -> deploy `dist-gis/about/index.html`
 
-- `data/food-access-dc/snap_locations.geojson`
-- `data/food-access-dc/non_snap_locations.geojson`
-- `data/food-access-dc/demographic_context.geojson`
+## Adding Future Projects
 
-Replace these with real ArcGIS Pro exports before publishing final analysis. Keep the files as valid GeoJSON FeatureCollections and preserve readable properties such as:
+For V1, keep `/gis/` as the main single-scroll portfolio page. Add new projects by:
 
-- `name`
-- `category`
-- `snap_status`
-- `address`
-- `neighbourhood`
+1. Adding the card and section to `gis/index.html`.
+2. Adding static maps/charts under `assets/maps/` or `assets/charts/`.
+3. Adding notes under `data/new-project-slug/` when source or processing context matters.
+4. Syncing the same public assets and HTML into `dist-gis/`.
 
-If field names change, update popup formatting in `js/food-access-map.js`.
+Create separate project pages only if the site direction changes.
 
-## Adding A Future Project
+## Ignored Local/Generated Files
 
-1. Create a new folder under `gis/new-project-slug/`.
-2. Add an `index.html` using the same project page structure.
-3. Add a project card to `gis/index.html`.
-4. Add a featured card to the homepage if it should be highlighted.
-5. Add data notes under `data/new-project-slug/`.
-6. Add static image exports under `assets/maps/new-project-slug/` or `assets/charts/`.
+`.gitignore` keeps local/editor/cache clutter, screenshots, raw GIS processing outputs, duplicate thumbnail working folders, ZIP exports, and the ignored duplicate `deploy-gisportfolio-site/` folder out of Git.
 
-## Deployment Notes
-
-This site can be deployed on any static host that supports clean folder URLs, including GitHub Pages, Netlify, Cloudflare Pages, or a static web server behind AlokRevi.com.
-
-Use the project root as the published directory. Confirm that direct links such as `/gis/food-access-dc/` resolve to the nested `index.html` files.
-
-## Roadmap
-
-- Maintain Food Access GeoJSON from validated GIS exports.
-- Replace static visual placeholders with final map and chart images.
-- Add final source citations to the data README files.
-- Add real Resume, LinkedIn, GitHub, and email links.
-- Add project thumbnails after final cartography is available.
-- Review copy against final results so no placeholder language remains on the public version.
-
+Review any large new data or image export before committing it.
